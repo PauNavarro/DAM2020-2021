@@ -39,4 +39,4 @@ p, li, dd, dt, address {
   line-height: 1.5;
 }
 dd::before{content:"\2022"}
-ul::before{content:"\2022"}
+.lista::before{content:"\2022"}
