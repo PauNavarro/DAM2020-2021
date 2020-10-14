@@ -1,0 +1,30 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class IMC {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado = new Scanner(System.in);
+
+		double peso;
+		double altura;
+		double talla;
+		double resultado;
+
+		System.out.println("Dime tu peso");
+		peso = teclado.nextDouble();
+
+		System.out.println("Dime tu altura (En metros, por ejemplo 1.80)");
+		altura = teclado.nextDouble();
+		
+		talla = altura * altura;
+		resultado = peso/talla;
+		
+		System.out.println("Tu IMC es de = " + resultado);
+		teclado.close();
+	}
+
+}
