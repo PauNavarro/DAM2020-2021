@@ -3,7 +3,7 @@ body {
   margin: 0 auto;
 }
 
-.receiver-column {
+.cabecera{
   text-align: right;
 }
 
@@ -22,3 +22,5 @@ p,ul,ol,dl,address {
 p, li, dd, dt, address {
   line-height: 1.5;
 }
+dd::before{content:"\2022"}
+ul::before{content:"\2022"}
