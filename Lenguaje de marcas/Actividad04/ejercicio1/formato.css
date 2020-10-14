@@ -5,6 +5,22 @@ body {
 
 .cabecera{
   text-align: right;
+  font-style: italic;
+}
+.cabecera2{
+  font-style: italic;
+}
+.nombre{
+	font-weight: bold;
+}
+
+.fecha{
+	font-weight: bold; 
+}
+
+.tlfn{
+	font-weight: bold;
+	font-style: italic;
 }
 
 h1 {
