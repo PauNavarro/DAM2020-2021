@@ -1,0 +1,8 @@
+
+public class VentanasEmergentes {
+
+	public VentanasEmergentes(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

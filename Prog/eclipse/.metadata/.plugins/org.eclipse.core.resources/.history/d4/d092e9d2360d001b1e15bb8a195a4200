@@ -1,0 +1,30 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class Suma {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado = new Scanner(System.in);
+
+		// Petición de valores
+
+		System.out.println("Dame el primer numero");
+
+		int Numero1 = teclado.nextInt();
+
+		System.out.println("Dame el Segundo numero");
+
+		int Numero2 = teclado.nextInt();
+
+		// Calculo de la suma
+
+		int resultado = Numero1 + Numero2;
+		System.out.println("El resultado de la suma es " + resultado);
+
+		teclado.close();
+	}
+
+}
