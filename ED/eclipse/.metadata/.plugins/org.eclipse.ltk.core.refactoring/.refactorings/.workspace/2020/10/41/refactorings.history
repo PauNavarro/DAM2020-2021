@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;HolamundoGUI/src/Calculadora.java&apos;" deleteContents="false" description="Delete resource &apos;HolamundoGUI/src/Calculadora.java&apos;" element1="/HolamundoGUI/src/Calculadora.java" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1602060966188"/>&#x0A;<refactoring comment="Delete resource &apos;HolamundoGUI/src/VentanasEmergentes.java&apos;" deleteContents="false" description="Delete resource &apos;HolamundoGUI/src/VentanasEmergentes.java&apos;" element1="/HolamundoGUI/src/VentanasEmergentes.java" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1602063295923"/>
-</session>
