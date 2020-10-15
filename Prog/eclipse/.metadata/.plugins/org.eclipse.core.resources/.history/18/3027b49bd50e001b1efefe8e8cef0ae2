@@ -1,0 +1,37 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class ConversorTiempo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// Se debe realizar un programa en el que se introduzca
+		// un número de minutos y devuelva la conversión a días, horas y minutos
+		
+		Scanner teclado = new Scanner (System.in);
+		
+	int minutos;
+	int minutosiniciales;
+	int horas = 0;
+	int dias = 0;
+	int aux;
+		
+	System.out.println("Dame el tiempo en Min a convertir");
+	minutosiniciales = teclado.nextInt();
+	aux = minutosiniciales;
+	
+	for (minutos = aux; minutos <= 60;) {
+		minutos = aux - 60;
+		horas++;
+		if (horas > 24) {
+			horas = horas - 24;
+			dias++;
+		}
+	}
+	System.out.println("Los " + minutosiniciales + "Min equivalen a " + dias + " dias, "+ horas +" h, " + minutos +"min.");
+	teclado.close();
+	}
+
+}
