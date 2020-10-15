@@ -9,6 +9,8 @@ public class TablaMultiplicar {
 		// Se debe realizar un programa que dado un número introducido por el usuario,
 		// muestre en pantalla la tabla de multiplicar.
 
+		// Declarar entrada de teclado y variables
+
 		Scanner teclado = new Scanner(System.in);
 
 		int numeroMultiplicar;
@@ -16,11 +18,15 @@ public class TablaMultiplicar {
 		int resultado = 0;
 		int contador = 1;
 
+		// Pedir al usuario el numero a multiplicar y hasta donde multiplicarlo
+
 		System.out.println("Que numero quieres multiplicar?");
 		numeroMultiplicar = teclado.nextInt();
 
 		System.out.println("Cuantos multiplos quieres mostrar");
 		multiplos = teclado.nextInt();
+
+		// Realizar el calculo
 
 		while (contador <= multiplos) {
 			resultado = numeroMultiplicar * contador;
