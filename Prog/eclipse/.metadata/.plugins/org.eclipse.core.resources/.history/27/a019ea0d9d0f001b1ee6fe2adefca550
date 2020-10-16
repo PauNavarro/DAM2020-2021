@@ -1,0 +1,39 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class CalculaDescuento {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// Escribe un programa que dado el precio de un artículo y el precio de venta
+		// real nos muestre el porcentaje de descuento realizado
+
+		Scanner teclado = new Scanner(System.in);
+
+		int precioReal;
+		int precioFinal;
+		int descuento;
+		int aux1 = 0;
+		int aux2 = 0;
+
+		System.out.println("Dame el precio original del producto");
+		precioReal = teclado.nextInt();
+
+		System.out.println("Dame el precio final del producto");
+		precioFinal = teclado.nextInt();
+
+		aux1 = precioFinal - precioReal;
+
+		aux2 = aux1 / precioReal;
+		
+		descuento = aux2 * 100;
+
+		System.out.println("El descuento realizado es de un " + descuento + "%");
+
+		teclado.close();
+
+	}
+
+}

@@ -1,0 +1,29 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class EscribeNota {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado = new Scanner(System.in);
+
+		// Escribe un programa que lea una calificación numérica entre 0 y 10 y la
+		// transforma en calificación alfabética, escribiendo el resultado.
+		
+		int nota;
+		String notaTexto;
+		
+		System.out.println("Dime la calificación numérica");
+		nota = teclado.nextInt();
+		
+		switch(nota) {
+		
+		case 1 : notaTexto = "Muy deficiente";
+		System.out.println("La nota es " + notaTexto);
+		}
+		teclado.close();
+	}
+
+}
