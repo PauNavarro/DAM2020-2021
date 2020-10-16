@@ -14,7 +14,7 @@ public class EscribeNota {
 		
 		int nota;
 		String notaTexto;
-	
+		
 		System.out.println("Dime la calificación numérica");
 		nota = teclado.nextInt();
 		
