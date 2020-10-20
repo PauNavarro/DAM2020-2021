@@ -50,7 +50,5 @@ public class SalarioNeto {
 			salarioNeto = salarioBruto;
 		}
 		System.out.println("El salario Neto es de : " + salarioNeto + "€ , y el bruto de : " + salarioBrutoAux + "€.");
-
-		teclado.close();
 	}
 }
