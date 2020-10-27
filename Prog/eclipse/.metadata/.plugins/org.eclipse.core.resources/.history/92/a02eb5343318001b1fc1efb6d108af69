@@ -1,0 +1,125 @@
+package extra;
+
+import java.util.Scanner;
+
+public class TresEnRalla {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado = new Scanner(System.in);
+
+		int jugadaInicial = (int) (Math.random() * 2);
+		int jugadaPrograma = (int) (Math.random() * 9);
+		int jugadaUsuario;
+
+		if (jugadaInicial == 0) {
+			System.out.println("Juegas primero, en que posicion quieres poner tu ficha (Usuario (O), programa (X)");
+			System.out.println("Introduce el numero donde quieras colocar tu ficha");
+			System.out.println(" 0 | 1 | 2 ");
+			System.out.println(" 3 | 4 | 5 ");
+			System.out.println(" 6 | 7 | 8 ");
+
+			jugadaUsuario = teclado.nextInt();
+
+			switch (jugadaUsuario) {
+
+			case 0:
+				System.out.println(" O | 1 | 2 ");
+				System.out.println(" 3 | 4 | 5 ");
+				System.out.println(" 6 | 7 | 8 ");
+				
+			case 1:
+				System.out.println(" 0 | O | 2 ");
+				System.out.println(" 3 | 4 | 5 ");
+				System.out.println(" 6 | 7 | 8 ");
+			
+			case 2:
+				System.out.println(" 0 | 1 | O ");
+				System.out.println(" 3 | 4 | 5 ");
+				System.out.println(" 6 | 7 | 8 ");
+				
+			case 3:
+				System.out.println(" 0 | 1 | 2 ");
+				System.out.println(" O | 4 | 5 ");
+				System.out.println(" 6 | 7 | 8 ");
+			
+			case 4:
+				System.out.println(" 0 | 1 | 2 ");
+				System.out.println(" 3 | O | 5 ");
+				System.out.println(" 6 | 7 | 8 ");
+				
+			case 5:
+				System.out.println(" 0 | 1 | 2 ");
+				System.out.println(" 3 | 4 | O ");
+				System.out.println(" 6 | 7 | 8 ");
+				
+			case 6:
+				System.out.println(" 0 | 1 | 2 ");
+				System.out.println(" 3 | 4 | 5 ");
+				System.out.println(" O | 7 | 8 ");
+				
+			case 7:
+				System.out.println(" 0 | 1 | 2 ");
+				System.out.println(" 3 | 4 | 5 ");
+				System.out.println(" 6 | O | 8 ");
+				
+			case 8:
+				System.out.println(" 0 | 1 | 2 ");
+				System.out.println(" 3 | 4 | 5 ");
+				System.out.println(" 6 | 7 | O ");
+			}
+
+		} else {
+			System.out.println("El programa juega primero:(Usuario (O), programa (X)");
+			switch (jugadaPrograma) {
+
+			case 0:
+				System.out.println(" O | 1 | 2 ");
+				System.out.println(" 3 | 4 | 5 ");
+				System.out.println(" 6 | 7 | 8 ");
+				
+			case 1:
+				System.out.println(" 0 | O | 2 ");
+				System.out.println(" 3 | 4 | 5 ");
+				System.out.println(" 6 | 7 | 8 ");
+			
+			case 2:
+				System.out.println(" 0 | 1 | O ");
+				System.out.println(" 3 | 4 | 5 ");
+				System.out.println(" 6 | 7 | 8 ");
+				
+			case 3:
+				System.out.println(" 0 | 1 | 2 ");
+				System.out.println(" O | 4 | 5 ");
+				System.out.println(" 6 | 7 | 8 ");
+			
+			case 4:
+				System.out.println(" 0 | 1 | 2 ");
+				System.out.println(" 3 | O | 5 ");
+				System.out.println(" 6 | 7 | 8 ");
+				
+			case 5:
+				System.out.println(" 0 | 1 | 2 ");
+				System.out.println(" 3 | 4 | O ");
+				System.out.println(" 6 | 7 | 8 ");
+				
+			case 6:
+				System.out.println(" 0 | 1 | 2 ");
+				System.out.println(" 3 | 4 | 5 ");
+				System.out.println(" O | 7 | 8 ");
+				
+			case 7:
+				System.out.println(" 0 | 1 | 2 ");
+				System.out.println(" 3 | 4 | 5 ");
+				System.out.println(" 6 | O | 8 ");
+				
+			case 8:
+				System.out.println(" 0 | 1 | 2 ");
+				System.out.println(" 3 | 4 | 5 ");
+				System.out.println(" 6 | 7 | O ");
+			}
+		}
+	}
+
+}

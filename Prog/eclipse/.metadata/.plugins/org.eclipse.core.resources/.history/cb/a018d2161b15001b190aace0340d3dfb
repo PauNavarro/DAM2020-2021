@@ -1,0 +1,35 @@
+package ejercicios;
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class PiedraPapelTijerasEnum {
+
+	enum Gesture {
+		piedra, papel, tijeras
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado = new Scanner(System.in);
+		Random random = new Random();
+		
+		int usuario;
+		int programa;
+		
+		System.out.println("¿piedra, papel o tijeras?");
+		usuario = teclado.nextInt();
+		System.out.println("Has elegido " + usuario);
+		programa = random.nextInt();
+		
+		if (programa > usuario) {
+			System.out.println("Gana el programa");
+		}else if (programa < usuario){
+			System.out.println("Gana el usuario");
+		}else {
+			System.out.println("Empate");
+		}
+		
+	}
+}

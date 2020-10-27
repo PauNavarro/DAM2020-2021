@@ -1,0 +1,62 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class PiedraPapelTijerasEnum {
+
+	enum Gesture {
+		piedra(0), papel(1), tijeras(2);
+
+		private int type;
+
+		Gesture(int tipo) {
+			this.type = tipo;
+		}
+
+		public int getType() {
+			return type;
+		}
+	}
+
+	public static void main(String[] args) {
+
+		final Scanner teclado = new Scanner(System.in);
+
+		System.out.println("¿piedra, papel o tijeras?");
+		final String jugada = teclado.next();
+
+		if (jugada.equals("tijeras")) {
+			generateDraw(Gesture.tijeras);
+		} else if (jugada.equals("piedra")) {
+			generateDraw(Gesture.piedra);
+		} else if (jugada.equals("papel")) {
+			generateDraw(Gesture.papel);
+		}
+
+		teclado.close();
+	}
+
+	public static void generateDraw(Gesture usuario) {
+		final int jugadaPrograma = (int) (Math.random() * 3);
+
+		if (jugadaPrograma == 0) {
+			System.out.println("El programa juega piedra");
+		} else if (jugadaPrograma == 1) {
+			System.out.println("El programa juega papel");
+		} else {
+			System.out.println("El programa juega tijeras");
+		}
+		
+
+			if (jugadaPrograma > usuario.getType()) {
+				System.out.println("Gana el programa");
+			if (jugadaPrograma == 2) {
+				System.out.println("Gana el programa");
+			} 
+			} else if (jugadaPrograma < usuario.getType()) {
+				System.out.println("Gana el usuario");
+			} else {
+				System.out.println("Empate");
+			}
+		}
+	}

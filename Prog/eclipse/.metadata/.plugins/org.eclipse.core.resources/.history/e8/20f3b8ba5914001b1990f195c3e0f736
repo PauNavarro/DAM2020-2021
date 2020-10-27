@@ -1,0 +1,171 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class PiedraPapelTijeras {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado = new Scanner(System.in);
+
+		String usuario;
+		String jugar = "si";
+		int random = (int) (Math.random() * 3);
+
+		while (jugar == "si") {
+
+			System.out.println("¿piedra , papel o tijeras?");
+			usuario = teclado.next();
+
+			switch (usuario) {
+
+			case "piedra":
+
+				switch (random) {
+
+				case 0:
+					System.out.println("Piedra / Piedra");
+					System.out.println("Empate");
+					System.out.println("Quieres jugar de nuevo (si/no)");
+					jugar = teclado.next();
+					
+					if (jugar == "no") {
+						System.out.println("Gracias por jugar");
+					}else {
+						System.out.println("Que eliges esta vez?");
+						usuario = teclado.next();
+					}
+					break;
+
+				case 1:
+					System.out.println("Piedra / Papel");
+					System.out.println("Gana el programa");
+					System.out.println("Quieres jugar de nuevo (si/no)");
+					jugar = teclado.next();
+					
+					if (jugar == "no") {
+						System.out.println("Gracias por jugar");
+					}else {
+						System.out.println("Que eliges esta vez?");
+						usuario = teclado.next();
+					}
+					break;
+
+				case 2:
+					System.out.println("Piedra / Tijeras");
+					System.out.println("Gana el usuario");
+					System.out.println("Quieres jugar de nuevo (si/no)");
+					jugar = teclado.next();
+					
+					if (jugar == "no") {
+						System.out.println("Gracias por jugar");
+					}else {
+						System.out.println("Que eliges esta vez?");
+						usuario = teclado.next();
+					}
+					break;
+				}
+
+			case "papel":
+
+				switch (random) {
+
+				case 0:
+					System.out.println("Papel / Piedra");
+					System.out.println("Gana el usuario");
+					System.out.println("Quieres jugar de nuevo (si/no)");
+					jugar = teclado.next();
+					
+					if (jugar == "no") {
+						System.out.println("Gracias por jugar");
+					}else {
+						System.out.println("Que eliges esta vez?");
+						usuario = teclado.next();
+					}
+					break;
+
+				case 1:
+					System.out.println("Papel / Papel");
+					System.out.println("Empate");
+					System.out.println("Quieres jugar de nuevo (si/no)");
+					jugar = teclado.next();
+					
+					if (jugar == "no") {
+						System.out.println("Gracias por jugar");
+					}else {
+						System.out.println("Que eliges esta vez?");
+						usuario = teclado.next();
+					}
+					break;
+
+				case 2:
+					System.out.println("Papel / Tijeras");
+					System.out.println("Gana el programa");
+					System.out.println("Quieres jugar de nuevo (si/no)");
+					jugar = teclado.next();
+					
+					if (jugar == "no") {
+						System.out.println("Gracias por jugar");
+					}else {
+						System.out.println("Que eliges esta vez?");
+						usuario = teclado.next();
+					}
+					break;
+				}
+
+			case "tijeras":
+
+				switch (random) {
+
+				case 0:
+					System.out.println("Tijeras / Piedra");
+					System.out.println("Gana el programa");
+					System.out.println("Quieres jugar de nuevo (si/no)");
+					jugar = teclado.next();
+					
+					if (jugar == "no") {
+						System.out.println("Gracias por jugar");
+					}else {
+						System.out.println("Que eliges esta vez?");
+						usuario = teclado.next();
+					}
+					break;
+
+				case 1:
+					System.out.println("Tijeras / Papel");
+					System.out.println("Gana el usuario");
+					System.out.println("Quieres jugar de nuevo (si/no)");
+					jugar = teclado.next();
+					
+					if (jugar == "no") {
+						System.out.println("Gracias por jugar");
+					}else {
+						System.out.println("Que eliges esta vez?");
+						usuario = teclado.next();
+					}
+					break;
+
+				case 2:
+					System.out.println("Tijeras / Tijeras");
+					System.out.println("Empate");
+					System.out.println("Quieres jugar de nuevo (si/no)");
+					jugar = teclado.next();
+					
+					if (jugar == "no") {
+						System.out.println("Gracias por jugar");
+					}else {
+						System.out.println("Que eliges esta vez?");
+						usuario = teclado.next();
+					}
+					break;
+				}
+			default:
+				System.out.println("El valor introducido no es valido, por favor, introduce piedra, "
+						+ "papel o tijeras con todas las letras en minusculas");
+			}
+
+		}
+		teclado.close();
+	}
+}

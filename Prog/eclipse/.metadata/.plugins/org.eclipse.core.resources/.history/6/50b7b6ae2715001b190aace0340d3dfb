@@ -1,0 +1,156 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class PiedraPapelTijeras {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado = new Scanner(System.in);
+
+		String usuario;
+		String jugar = "si";
+		int random;
+
+		while (jugar.equals("si")) {
+
+			random = (int) (Math.random() * 3);
+
+			System.out.println("¿piedra , papel o tijeras?");
+			usuario = teclado.next();
+
+			switch (usuario) {
+
+			case "piedra":
+				if (random == 0) {
+					System.out.println("El programa ha elegido piedra");
+					System.out.println("Piedra / Piedra");
+					System.out.println("Empate");
+					System.out.println("Quieres jugar de nuevo? (si/no)");
+					jugar = teclado.next();
+					if (jugar.equals("no")) {
+						System.out.println("Gracias por jugar!");
+					}
+					if (jugar.equals("si")) {
+						System.out.println("¿piedra , papel o tijeras?");
+						usuario = teclado.next();
+					}
+				} else if (random == 1) {
+					System.out.println("El programa ha elegido papel");
+					System.out.println("Piedra / Papel");
+					System.out.println("Gana el programa");
+					System.out.println("Quieres jugar de nuevo? (si/no)");
+					jugar = teclado.next();
+					if (jugar.equals("no")) {
+						System.out.println("Gracias por jugar!");
+					}
+					if (jugar.equals("si")) {
+						System.out.println("¿piedra , papel o tijeras?");
+						usuario = teclado.next();
+					}
+				} else {
+					System.out.println("El programa ha elegido tijeras");
+					System.out.println("Piedra / Tijeras");
+					System.out.println("Gana el usuario");
+					System.out.println("Quieres jugar de nuevo? (si/no)");
+					jugar = teclado.next();
+					if (jugar.equals("no")) {
+						System.out.println("Gracias por jugar!");
+					}
+					if (jugar.equals("si")) {
+						System.out.println("¿piedra , papel o tijeras?");
+						usuario = teclado.next();
+					}
+				}
+			case "papel":
+				if (random == 0) {
+					System.out.println("El programa ha elegido piedra");
+					System.out.println("Papel / Piedra");
+					System.out.println("Gana el usuario");
+					System.out.println("Quieres jugar de nuevo? (si/no)");
+					jugar = teclado.next();
+					if (jugar.equals("no")) {
+						System.out.println("Gracias por jugar!");
+					}
+					if (jugar.equals("si")) {
+						System.out.println("¿piedra , papel o tijeras?");
+						usuario = teclado.next();
+					}
+				} else if (random == 1) {
+					System.out.println("El programa ha elegido papel");
+					System.out.println("Papel / Papel");
+					System.out.println("Empate");
+					System.out.println("Quieres jugar de nuevo? (si/no)");
+					jugar = teclado.next();
+					if (jugar.equals("no")) {
+						System.out.println("Gracias por jugar!");
+					}
+					if (jugar.equals("si")) {
+						System.out.println("¿piedra , papel o tijeras?");
+						usuario = teclado.next();
+					}
+				} else {
+					System.out.println("El programa ha elegido tijeras");
+					System.out.println("Papel / Tijeras");
+					System.out.println("Gana el programa");
+					System.out.println("Quieres jugar de nuevo? (si/no)");
+					jugar = teclado.next();
+					if (jugar.equals("no")) {
+						System.out.println("Gracias por jugar!");
+					}
+					if (jugar.equals("si")) {
+						System.out.println("¿piedra , papel o tijeras?");
+						usuario = teclado.next();
+					}
+				}
+			case "tijeras":
+				if (random == 0) {
+					System.out.println("El programa ha elegido piedra");
+					System.out.println("Tijeras / Piedra");
+					System.out.println("Gana el programa");
+					System.out.println("Quieres jugar de nuevo? (si/no)");
+					jugar = teclado.next();
+					if (jugar.equals("no")) {
+						System.out.println("Gracias por jugar!");
+					}
+					if (jugar.equals("si")) {
+						System.out.println("¿piedra , papel o tijeras?");
+						usuario = teclado.next();
+					}
+				} else if (random == 1) {
+					System.out.println("El programa ha elegido papel");
+					System.out.println("Tijeras / Papel");
+					System.out.println("Gana el usuario");
+					System.out.println("Quieres jugar de nuevo? (si/no)");
+					jugar = teclado.next();
+					if (jugar.equals("no")) {
+						System.out.println("Gracias por jugar!");
+					}
+					if (jugar.equals("si")) {
+						System.out.println("¿piedra , papel o tijeras?");
+						usuario = teclado.next();
+					}
+				} else {
+					System.out.println("El programa ha elegido tijeras");
+					System.out.println("Tijeras / Tijeras");
+					System.out.println("Empate");
+					System.out.println("Quieres jugar de nuevo? (si/no)");
+					jugar = teclado.next();
+					if (jugar.equals("no")) {
+						System.out.println("Gracias por jugar!");
+					}
+					if (jugar.equals("si")) {
+						System.out.println("¿piedra , papel o tijeras?");
+						usuario = teclado.next();
+					}
+				}
+			default:
+				if (jugar.equals("si")) {
+					System.out.println("Introduce una jugada valida (piedra, papel o tijeras)");
+				}
+			}
+		}
+		teclado.close();
+	}
+}

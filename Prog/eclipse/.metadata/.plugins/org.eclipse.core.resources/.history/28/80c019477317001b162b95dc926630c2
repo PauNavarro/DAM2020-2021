@@ -1,0 +1,30 @@
+package ejerciciosBucles;
+
+import java.util.Scanner;
+
+public class Ejercicio11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// Calcular el factorial de un número n, siendo n!= 1*2*3*...*(n-1)*n
+
+		Scanner teclado = new Scanner(System.in);
+
+		int numero;
+		int factorial;
+
+		System.out.println("Dame un numero para calcular su factorial");
+		numero = teclado.nextInt();
+
+		for (int cont = 1; cont <= numero; cont++) {
+			// n= 3 cnt = 1 fct = 6
+			// fct = 1*2*3
+
+			factorial = (cont * cont++) - numero;
+
+		}
+		System.out.println(factorial);
+	}
+
+}

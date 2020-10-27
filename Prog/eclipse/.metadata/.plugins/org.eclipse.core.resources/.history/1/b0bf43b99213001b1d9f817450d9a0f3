@@ -1,0 +1,49 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class PideFecha {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado = new Scanner(System.in);
+
+		// Escribir un programa que pida al usuario el día, el mes y el año correcta y
+		// mostrar la fecha del día siguiente. Suponer que todos los meses tienen 30
+		// días...
+
+		int dia;
+		int mes;
+		int año;
+		int diaFinal;
+
+		System.out.println("Dame el dia");
+		dia = teclado.nextInt();
+
+		System.out.println("Dame el mes(Numerico)");
+		mes = teclado.nextInt();
+
+		System.out.println("Dame el año");
+		año = teclado.nextInt();
+
+		System.out.println("La fecha introducida es :" + dia + "-" + mes + "-" + año + ".");
+
+		switch (mes) {
+
+		case 1:
+			diaFinal = dia + 1;
+			System.out.println("El dia siguiente sera :" + diaFinal + "-" + mes + "-" + año + ".");
+			break;
+		
+		case 2:
+			diaFinal = dia + 1; 
+			System.out.println("El dia siguiente sera :" + diaFinal + "-" + mes + "-" + año + ".");
+			break;
+			
+		}
+
+		teclado.close();
+	}
+
+}

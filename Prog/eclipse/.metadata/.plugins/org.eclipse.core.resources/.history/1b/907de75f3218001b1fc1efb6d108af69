@@ -1,0 +1,24 @@
+package extra;
+
+import java.util.Scanner;
+
+public class TresEnRalla {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado = new Scanner(System.in);
+
+		int jugadaInicial = (int) (Math.random() * 2);
+
+		if (jugadaInicial == 0) {
+			System.out.println("Juegas primero, en que posicion quieres poner tu ficha (Usuario (o), programa (x)");
+		} else {
+			System.out.println("El programa juega primero:(Usuario (o), programa (x)");
+			System.out.println("  |  |  ");
+			System.out.println("  |  |  ");
+			System.out.println("  |  |  ");
+		}
+	}
+
+}

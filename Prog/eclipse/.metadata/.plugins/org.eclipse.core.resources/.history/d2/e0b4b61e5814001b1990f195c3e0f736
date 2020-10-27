@@ -1,0 +1,85 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class PiedraPapelTijeras {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado = new Scanner(System.in);
+
+		String usuario;
+		int random = (int) (Math.random() * 3);
+
+		System.out.println("¿piedra , papel o tijeras?");
+		usuario = teclado.next();
+
+		switch (usuario) {
+
+		case "piedra":
+
+			switch (random) {
+
+			case 0:
+				System.out.println("Piedra / Piedra");
+				System.out.println("Empate");
+				break;
+			
+			case 1:
+				System.out.println("Piedra / Papel");
+				System.out.println("Gana el programa");
+				break;
+			
+			case 2:
+				System.out.println("Piedra / Tijeras");
+				System.out.println("Gana el usuario");
+				break;
+			}
+
+		case "papel":
+			
+			switch (random) {
+			
+			case 0:
+				System.out.println("Papel / Piedra");
+				System.out.println("Gana el usuario");
+				break;
+			
+			case 1:
+				System.out.println("Papel / Papel");
+				System.out.println("Empate");
+				break;
+			
+			case 2:
+				System.out.println("Papel / Tijeras");
+				System.out.println("Gana el programa");
+				break;
+			}
+
+		case "tijeras":
+			
+			switch (random) {
+			
+			case 0:
+				System.out.println("Tijeras / Piedra");
+				System.out.println("Gana el programa");
+				break;
+			
+			case 1:
+				System.out.println("Tijeras / Papel");
+				System.out.println("Gana el usuario");
+				break;
+			
+			case 2:
+				System.out.println("Tijeras / Tijeras");
+				System.out.println("Empate");
+				break;
+			}
+		default:
+			System.out.println("El valor introducido no es valido, por favor, introduce piedra, "
+					+ "papel o tijeras con todas las letras en minusculas");
+		}
+		teclado.close();
+	}
+}

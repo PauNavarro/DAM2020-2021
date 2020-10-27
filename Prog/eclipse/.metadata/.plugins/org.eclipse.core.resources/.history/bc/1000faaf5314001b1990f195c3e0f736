@@ -1,0 +1,29 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class OperadorDos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado = new Scanner(System.in);
+
+		// Pedir dos números enteros y un operador: +,-,*,/ y realizar y mostrar la
+		// operación que corresponda con esos dos operadores.
+		
+		int numero1;
+		int numero2;
+		String operador;
+		
+		System.out.println("Dame los dos numeros que quieras introducir");
+		numero1 = teclado.nextInt();
+		numero2 = teclado.nextInt();
+		
+		System.out.println("Que operación deseas realizar?");
+		operador = teclado.nextLine();
+		
+		System.out.println();
+	}
+
+}
