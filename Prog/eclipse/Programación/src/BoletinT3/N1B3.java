@@ -1,4 +1,4 @@
-package BoletinT3;
+package boletinT3;
 
 public class N1B3 {
 

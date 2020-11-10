@@ -1,4 +1,4 @@
-package EjerciciosEntregables;
+package ejerciciosEntregables;
 import java.util.Scanner;
 
 /**
