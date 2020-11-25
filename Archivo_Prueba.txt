@@ -1,2 +1,0 @@
-Edito el archivo de texto
-Añado una segunda linea al archivo de prueba
