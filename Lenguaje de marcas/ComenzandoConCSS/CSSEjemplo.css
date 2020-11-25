@@ -1,0 +1,27 @@
+body {
+	color: /** #00F; */ #F60;
+	background-color: /** #CFC; */ #191919;
+	font-family: 'Bree Serif', Georgia, Cambria,serif;
+	font-size: 16px;
+}
+
+h1, h2 {
+	color: /** #F00; */ #C0F;
+	font-family: Verdana, Calibri, sans-serif;
+	font-size: 24px;
+}
+
+.datosLibro{
+	color: /** #060; */ #FF0;
+}
+
+.sustantivos {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.htmlcss {
+	color: /** #FFF; */ #000;
+	background-color: /** #000; */ #FFF;
+	font-style: italic;
+}

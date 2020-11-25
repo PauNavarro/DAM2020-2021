@@ -25,7 +25,7 @@ public class NXB22 {
 
 		for (; numeroA <= numeroB; numeroA++) {
 			
-			System.out.println(numeroA);
+			System.out.print(numeroA + " ");
 			
 			if (numeroA % 2 == 0) {
 
@@ -34,7 +34,7 @@ public class NXB22 {
 			}
 
 		}
-
+		System.out.println("");
 		System.out.println("Hay un total de " + contPar + " numeros pares");
 		
 		teclado.close();

@@ -1,8 +1,4 @@
-/**
- * 
- */
 package ejerciciosEntregables;
-
 import java.util.Scanner;
 
 /**
