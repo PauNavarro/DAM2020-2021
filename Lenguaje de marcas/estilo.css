@@ -1,0 +1,23 @@
+table, tr, td{
+			border: 1px solid black;background-color: #FFFFFF;text-align: center;vertical-align: middle;}
+		.box {
+  				  width:800px;
+   				  height:400px;
+   				  background-color:#d9d9d9;
+   				  position:fixed;
+   				  margin-left:-400px; 
+ 			      margin-top:-200px;  
+  				  top:50%;
+  				  left:50%;
+}
+body {background-color: #000000 }
+a {color:#000000}
+
+.hd {background-color: #c2c5cc}
+.pr {background-color: #FF91A4}
+.db {background-color: #00ff00}
+.ing{background-color: #DF00FF}
+.ED {background-color: #F6DD90}
+.lm {background-color: #45B5FE}
+.FoL{background-color: #296D98}
+.si {background-color: #FACA0F}
