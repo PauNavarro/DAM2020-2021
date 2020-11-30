@@ -10,11 +10,11 @@ public class EjemploPrimoNoPrimo {
 
 		int parar;
 
-		System.out.println("Dame un numero para comprobar si es primo o no");
-
 		do {
 
-			if (primo())
+			System.out.println("Dame un numero para comprobar si es primo o no");
+
+			if (primo() == true)
 				System.out.println("El numero no es primo");
 			else
 				System.out.println("El numero es primo");
@@ -32,6 +32,7 @@ public class EjemploPrimoNoPrimo {
 
 	private static boolean primo() {
 
+		@SuppressWarnings("resource")
 		Scanner teclado = new Scanner(System.in);
 
 		int numero;
@@ -46,8 +47,8 @@ public class EjemploPrimoNoPrimo {
 			if (numero % i == 0) {
 				noPrimo = true;
 				break;
-			}
-			return noPrimo;}
+			} 
+		}
 
 		return noPrimo;
 	}

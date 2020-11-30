@@ -2,22 +2,17 @@ package ejemplosTema4;
 
 import java.util.Scanner;
 
-public class Ejemplo1 {
+public class Ejemplo4 {
 
 	public static void main(String[] args) {
 
 		Scanner teclado = new Scanner(System.in);
 
-		int rdo = 0;
 		int parar;
-
-		System.out.println("Dame dos numeros para sumar:");
 
 		do {
 
-			rdo = suma();
-
-			System.out.println(rdo);
+			System.out.println(maximo());
 
 			System.out.println("Pulsa 0 para cerrar el programa, pulsa 1 para introducir otro numero;");
 			parar = teclado.nextInt();
@@ -27,27 +22,32 @@ public class Ejemplo1 {
 		System.out.println("El programa se va a detener, muchas gracias por usarlo.");
 
 		teclado.close();
-		
+
 	}
 
-	public static int suma() {
-		
+	private static int maximo() {
+
 		@SuppressWarnings("resource")
 		Scanner teclado = new Scanner(System.in);
-		
-		int rdo;
-		int n1;
-		int n2;
+		int num1;
+		int num2;
 
-		System.out.println("Dame un numero");
-		n1 = teclado.nextInt();
+		System.out.println("Dame dos numeros enteros para que te devuelva el numero mayor.");
 
-		System.out.println("Dame otro numero");
-		n2 = teclado.nextInt();
+		System.out.println("Dame el 1er numero");
+		num1 = teclado.nextInt();
 
-		rdo = n1 + n2;
-	
-		return rdo;
+		System.out.println("Dame el 2º numero");
+		num2 = teclado.nextInt();
+
+		if (num1 > num2) {
+
+			return num1;
+
+		} else {
+
+			return num2;
+
+		}
 	}
-
 }
