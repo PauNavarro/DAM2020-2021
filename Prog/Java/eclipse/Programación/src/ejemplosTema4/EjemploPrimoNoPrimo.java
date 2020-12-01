@@ -30,7 +30,7 @@ public class EjemploPrimoNoPrimo {
 
 	}
 
-	private static boolean primo() {
+	public static boolean primo() {
 
 		@SuppressWarnings("resource")
 		Scanner teclado = new Scanner(System.in);

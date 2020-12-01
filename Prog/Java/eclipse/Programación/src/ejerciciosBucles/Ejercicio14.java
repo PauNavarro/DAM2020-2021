@@ -7,7 +7,7 @@ public class Ejercicio14 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		// edir números hasta que se teclee uno negativo, y mostrar cuantos números se
+		// pedir números hasta que se teclee uno negativo, y mostrar cuantos números se
 		// han introducido…
 
 		Scanner teclado = new Scanner(System.in);
