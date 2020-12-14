@@ -1,0 +1,76 @@
+
+body {
+	background-color: black; 
+}
+
+.TituloPrincipal {
+	font-style: bolder;
+	color: red;
+}
+
+.Subtitulos {
+	font-style: italic;
+	color: red;
+
+}
+
+.Subtitulos2 {
+	font-style: italic;
+	color: cyan;
+}
+
+.Texto {
+	background-color: white;
+}
+
+.Texto2 {
+	color: white;
+}
+
+.Menu {
+	background-color: lightgray;
+	color: blue;
+}
+
+.img{
+	width: 500px;
+	height:500px;
+	border: double;
+	border-width: 8px;
+	border-color: red;
+	position: relative;
+}
+.img img{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	left: 0;
+	right: 0;
+}
+
+.img2{
+	width: 500px;
+	height:500px;
+	border: double;
+	border-width: 8px;
+	border-color: cyan;
+	position: relative;
+}
+.img2 img{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	left: 0;
+	right: 0;
+}
+
+.TextoExtra{
+	color: yellow;
+}
+
+article{
+	display: inline-block;
+}
+

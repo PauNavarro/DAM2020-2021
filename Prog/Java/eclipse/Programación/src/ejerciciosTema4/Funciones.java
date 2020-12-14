@@ -325,7 +325,7 @@ public class Funciones {
 		System.out.println("Calcular la suma de los N primeros numeros impares, introduce N");
 
 		numero = teclado.nextInt();
-		
+
 		for (int i = 0; i < numero; i++) {
 
 			sumatorio = numeroImpar + sumatorio;
@@ -340,25 +340,141 @@ public class Funciones {
 
 		@SuppressWarnings("resource")
 		Scanner teclado = new Scanner(System.in);
-		
+
 		int numeroInicio;
 		int numeroFin;
 		int sumatorio = 1;
-		
+
 		System.out.println("Dame el numero inicial");
 		numeroInicio = teclado.nextInt();
-		
+
 		System.out.println("Dame el numero final");
 		numeroFin = teclado.nextInt();
-		
-		for(int numeroActual = numeroInicio;numeroInicio <= numeroFin; numeroActual++) {
-			
+
+		for (int numeroActual = numeroInicio; numeroInicio <= numeroFin; numeroActual++) {
+
 			numeroInicio++;
-			
+
 			sumatorio = numeroActual * sumatorio;
-			
+
 		}
-		
+
 		return sumatorio;
 	}
+
+	public static void imprimeRectangulo() {
+
+		@SuppressWarnings("resource")
+		Scanner teclado = new Scanner(System.in);
+
+		int base;
+		int altura;
+		int baseAux;
+
+		System.out.println("Dame la base del rectangulo");
+		base = teclado.nextInt();
+
+		System.out.println("Dame la altura del rectangulo");
+		altura = teclado.nextInt();
+
+		while (altura > 0) {
+
+			baseAux = base;
+
+			while (baseAux > 0) {
+
+				System.out.print("*");
+
+				baseAux--;
+			}
+
+			System.out.println("");
+
+			altura--;
+		}
+
+		return;
+	}
+
+	public static void imprimerTriangulo() {
+
+		@SuppressWarnings("resource")
+		Scanner teclado = new Scanner(System.in);
+
+		int cont = 1;
+		int numIntr;
+		int imprimir = 0;
+
+		System.out.println("Dame la altura del triangulo a imprimir");
+		numIntr = teclado.nextInt();
+
+		for (; cont <= numIntr; cont++) {
+
+			imprimir = cont;
+
+			System.out.println();
+
+			do {
+
+				System.out.print("*");
+
+				imprimir--;
+
+			} while (imprimir > 0);
+
+		}
+	}
+
+	public static void cuentaCifras() {
+
+		@SuppressWarnings("resource")
+		Scanner teclado = new Scanner(System.in);
+
+		int numero = 0;
+		int contCifr = 0;
+
+		System.out.println("Dame un numero");
+		numero = teclado.nextInt();
+
+		if (numero > 0) {
+
+			do {
+
+				numero = numero / 10;
+				contCifr++;
+
+			} while (numero != 0);
+
+			System.out.println("El numero tiene " + contCifr + " cifras");
+
+		} else
+
+			System.out.println("El numero introducido no puede ser negativo");
+
+	}
+
+	public static void volteaNumeros() {
+
+		@SuppressWarnings("resource")
+		Scanner teclado = new Scanner(System.in);
+
+		int numero;
+		int cifra;
+		int numeroInverso = 0;
+
+		System.out.println("Dame un numero");
+		numero = teclado.nextInt();
+
+		while (numero > 0) {
+
+			cifra = numero % 10;
+			numeroInverso = (numeroInverso * 10) + cifra;
+			numero /= 10;
+		}
+
+		System.out.println("El numero inverso es = " + numeroInverso);
+
+		return;
+	}
+
 }

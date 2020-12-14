@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="iso-8859-1">
+	<meta charset="utf-8">
 	<meta name="description" content="Ejemplo de HTML5">
 	<meta name="keywords" content="HTML5, CSS3">
 	<title>Título del documento HTML</title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
 	<header>
-		<h1>Este es el t&iacute;tulo principal del sitio WEB</h1>
+		<h1 class="TituloPrincipal">Este es el t&iacute;tulo principal del sitio WEB</h1>
 	</header>
-	<nav>
+	<nav class="Menu">
 		<ul>
 			<li>Principal</li>
 			<li>Fotos</li>
@@ -22,44 +23,54 @@
 		<article>
 			<header>
 				<hgroup>
-					<h1>T&iacute;tulo del mensaje UNO</h1>
-					<h2>Subt&iacute;tulo del mensaje UNO</h2>
+					<h1 class="Subtitulos">T&iacute;tulo del mensaje UNO</h1>
+					<h2 class="Subtitulos">Subt&iacute;tulo del mensaje UNO</h2>
 				</hgroup>
-				<time datetime="2020-11-03" pubdate>Publicado el 03-11-2020</time>
 			</header>
-			<p>Este es el texto de mi SEGUNDO mensaje</p>
-			<figure>
+			<div class="Texto">
+				<time datetime="2020-11-03" pubdate>Publicado el 03-11-2020</time>
+				<p>Este es el texto de mi SEGUNDO mensaje</p>
+			</div>
+			<div class="img">
 				<img src="./images/draco.jpg" alt="Draco">
+			</div>
+			<div class="Texto">
 				<figcaption>Esta es la imagen del primer mensaje: DRACO</figcaption>
-			</figure>
-			<footer>
-				<p>Comentarios (0) </p>
-			</footer>
+				<footer>
+					<p>Comentarios (0) </p>
+				</footer>
+			</div>
 		</article>
-		<article>
+		<article class="derecha">
 			<header>
 				<hgroup>
-					<h1>T&iacute;tulo del mensaje DOS</h1>
-					<h2>Subt&iacute;tulo del mensaje DOS</h2>
+					<h1 class="Subtitulos2">T&iacute;tulo del mensaje DOS</h1>
+					<h2 class="Subtitulos2">Subt&iacute;tulo del mensaje DOS</h2>
 				</hgroup>
-				<time datetime="2020-11-04" pubdate>Publicado el 04-11-2020</time>
 			</header>
-			<p>Este es el texto de mi SEGUNDO mensaje</p>
-			<figure>
-				<img src="./images/ariel.jpg" alt="Ariel">
+			<div class="Texto2">
+				<time datetime="2020-11-04" pubdate>Publicado el 04-11-2020</time>
+				<p>Este es el texto de mi SEGUNDO mensaje</p>
+			</div>
+			<img src="./images/ariel.jpg" alt="Ariel" class="img2">
+			<div class="Texto2">
 				<figcaption>Esta es la imagen del segundo mensaje: ARIEL</figcaption>
-			</figure>
-			<footer>
-				<p>Comentarios (0) </p>
-			</footer>
+				<footer>
+					<p>Comentarios (0) </p>
+				</footer>
+			</div>
 		</article>
 	</section>
 	<aside>
-		<blockquote>Mensaje n&uacute;mero UNO</blockquote>
-		<blockquote>Mensaje n&uacute;mero DOS</blockquote>
+		<div class="TextoExtra">
+			<blockquote>Mensaje n&uacute;mero UNO</blockquote>
+			<blockquote>Mensaje n&uacute;mero DOS</blockquote>
+		</div>
 	</aside>
-	<footer>
-		&copy; 2020
-	</footer>
+	<div class="TextoExtra">
+		<footer>
+			&copy; 2020
+		</footer>
+	</div>
 </body>
 </html>

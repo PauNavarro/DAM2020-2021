@@ -13,17 +13,29 @@ public class EjerciciosTema4 {
 		do {
 
 			System.out.println("|============================================================================================|");
-			System.out.println("| 0) Cerrar el programa                                                                      |");
-			System.out.println("| 1) Sumar dos numeros                          9) Suma desde el 1 hasta un numero N         |");
-			System.out.println("| 2) Restar dos numeros                        10) Realiza el sumatorio de los N numeros     |");
-			System.out.println("| 3) Multiplicar dos numeros                   11) Muestra todos los numeros entre n1 y n2   |");
-			System.out.println("| 4) Dividir dos numeros                       12) Calcula el volumen de un cilindro         |");
-			System.out.println("| 5) Sacar el maximo entre dos numeros         13) Calcula el área de un cilindro            |");
-			System.out.println("| 6) Imprimir una piramide                     14) Calcula la suma de los N primeros impares |");
-			System.out.println("| 7) Comprobar numeros Primos                  15) Producto de N numeros consecutivos        |");
-			System.out.println("| 8) Mostrar el factorial de un numero                                                       |");
+			System.out.println("| 1) Sumar dos numeros                         10) Realiza el sumatorio de los N numeros     |");
+			System.out.println("| 2) Restar dos numeros                        11) Muestra todos los numeros entre n1 y n2   |");
+			System.out.println("| 3) Multiplicar dos numeros                   12) Calcula el volumen de un cilindro         |");
+			System.out.println("| 4) Dividir dos numeros                       13) Calcula el área de un cilindro            |");
+			System.out.println("| 5) Sacar el maximo entre dos numeros         14) Calcula la suma de los N primeros impares |");
+			System.out.println("| 6) Imprimir una piramide                     15) Producto de N numeros consecutivos        |");
+			System.out.println("| 7) Comprobar numeros Primos                  16) Imprime un rectangulo                     |");
+			System.out.println("| 8) Mostrar el factorial de un numero         17) Imprime un Triangulo                      |");
+			System.out.println("| 9) Suma desde el 1 hasta un numero N         18) Cuenta la cantidad de cifras de un numero |");
 			System.out.println("|============================================================================================|");
-
+			System.out.println("| 19) Darle la vuelta a un numero              28)                                           |");
+			System.out.println("| 20)                                          29)                                           |");
+			System.out.println("| 21)                                          30)                                           |");
+			System.out.println("| 22)                                          31)                                           |");
+			System.out.println("| 23)                                          32)                                           |");
+			System.out.println("| 24)                                          33)                                           |");
+			System.out.println("| 25)                                          34)                                           |");
+			System.out.println("| 26)                                          35)                                           |");
+			System.out.println("| 27)                                          36)                                           |");
+			System.out.println("|============================================================================================|");
+		
+			System.out.println("0) Cerrar el programa");
+			
 			opcion = teclado.nextInt();
 
 			switch (opcion) {
@@ -89,6 +101,22 @@ public class EjerciciosTema4 {
 				
 			case 15:
 				System.out.println("El resultado es = " + Funciones.rangoDeProductos());
+				break;
+				
+			case 16:
+				Funciones.imprimeRectangulo();
+				break;
+				
+			case 17:
+				Funciones.imprimerTriangulo();
+				break;
+			
+			case 18:
+				Funciones.cuentaCifras();
+				break;
+				
+			case 19:
+				Funciones.volteaNumeros();
 				break;
 				
 			default:
