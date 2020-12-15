@@ -12,27 +12,27 @@ public class EjerciciosTema4 {
 
 		do {
 
-			System.out.println("|============================================================================================|");
-			System.out.println("| 1) Sumar dos numeros                         10) Realiza el sumatorio de los N numeros     |");
-			System.out.println("| 2) Restar dos numeros                        11) Muestra todos los numeros entre n1 y n2   |");
-			System.out.println("| 3) Multiplicar dos numeros                   12) Calcula el volumen de un cilindro         |");
-			System.out.println("| 4) Dividir dos numeros                       13) Calcula el área de un cilindro            |");
-			System.out.println("| 5) Sacar el maximo entre dos numeros         14) Calcula la suma de los N primeros impares |");
-			System.out.println("| 6) Imprimir una piramide                     15) Producto de N numeros consecutivos        |");
-			System.out.println("| 7) Comprobar numeros Primos                  16) Imprime un rectangulo                     |");
-			System.out.println("| 8) Mostrar el factorial de un numero         17) Imprime un Triangulo                      |");
-			System.out.println("| 9) Suma desde el 1 hasta un numero N         18) Cuenta la cantidad de cifras de un numero |");
-			System.out.println("|============================================================================================|");
-			System.out.println("| 19) Darle la vuelta a un numero              28)                                           |");
-			System.out.println("| 20)                                          29)                                           |");
-			System.out.println("| 21)                                          30)                                           |");
-			System.out.println("| 22)                                          31)                                           |");
-			System.out.println("| 23)                                          32)                                           |");
-			System.out.println("| 24)                                          33)                                           |");
-			System.out.println("| 25)                                          34)                                           |");
-			System.out.println("| 26)                                          35)                                           |");
-			System.out.println("| 27)                                          36)                                           |");
-			System.out.println("|============================================================================================|");
+			System.out.println("|==============================================================================================|");
+			System.out.println("| 1) Sumar dos numeros                           10) Realiza el sumatorio de los N numeros     |");
+			System.out.println("| 2) Restar dos numeros                          11) Muestra todos los numeros entre n1 y n2   |");
+			System.out.println("| 3) Multiplicar dos numeros                     12) Calcula el volumen de un cilindro         |");
+			System.out.println("| 4) Dividir dos numeros                         13) Calcula el área de un cilindro            |");
+			System.out.println("| 5) Sacar el maximo entre dos numeros           14) Calcula la suma de los N primeros impares |");
+			System.out.println("| 6) Imprimir una piramide                       15) Producto de N numeros consecutivos        |");
+			System.out.println("| 7) Comprobar numeros Primos                    16) Imprime un rectangulo                     |");
+			System.out.println("| 8) Mostrar el factorial de un numero           17) Imprime un Triangulo                      |");
+			System.out.println("| 9) Suma desde el 1 hasta un numero N           18) Cuenta la cantidad de cifras de un numero |");
+			System.out.println("|==============================================================================================|");
+			System.out.println("| 19) Darle la vuelta a un numero                28)                                           |");
+			System.out.println("| 20) Buscar en que posiciones aparece un numero 29)                                           |");
+			System.out.println("| 21) Imprime una L                              30)                                           |");
+			System.out.println("| 22) Suma las cifras pared de un numero         31)                                           |");
+			System.out.println("| 23)                                            32)                                           |");
+			System.out.println("| 24)                                            33)                                           |");
+			System.out.println("| 25)                                            34)                                           |");
+			System.out.println("| 26)                                            35)                                           |");
+			System.out.println("| 27)                                            36)                                           |");
+			System.out.println("|==============================================================================================|");
 		
 			System.out.println("0) Cerrar el programa");
 			
@@ -119,11 +119,24 @@ public class EjerciciosTema4 {
 				Funciones.volteaNumeros();
 				break;
 				
+			case 20:
+				Funciones.BuscaCifra();
+				break;
+				
+			case 21:
+				Funciones.ImprimeL();
+				break;
+				
+			case 22:
+				Funciones.SumaCifrasPares();
+				break;
+				
 			default:
 				System.out.println("La opcion introducida no es valida, introduce una opcion valida");
 			}
 
 			if (opcion != 0) {
+				System.out.println();
 				System.out.println("Pulsa 0 para finalizar el programa, cualquier otro numero te devolvera al menu");
 				opcion = teclado.nextInt();
 			}

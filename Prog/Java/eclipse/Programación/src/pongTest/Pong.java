@@ -81,7 +81,7 @@ public class Pong extends JPanel {
 		JFrame frame = new JFrame("Pong");
 		Pong pong = new Pong();
 		frame.add(pong);
-		frame.setSize(500, 500);
+		frame.setSize(800, 800);
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -90,10 +90,10 @@ public class Pong extends JPanel {
 			parar = pong.movimientoPelota(parar);
 			pong.movimientoRect();
 			pong.repaint();
-			Thread.sleep(3);
+			Thread.sleep(2);
 		} while (parar == 0);
 		
-		JOptionPane.showMessageDialog(null, "Has perdido","Has perdido", JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(null, "Si","Has perdido", JOptionPane.ERROR_MESSAGE);
 		
 		
 	}

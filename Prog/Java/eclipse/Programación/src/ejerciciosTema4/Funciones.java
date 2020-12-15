@@ -477,4 +477,94 @@ public class Funciones {
 		return;
 	}
 
+	public static void BuscaCifra() {
+
+		@SuppressWarnings("resource")
+		Scanner teclado = new Scanner(System.in);
+
+		int numero;
+		int numeroAux;
+		int numeroBuscado;
+		int numeroRepeticiones = 0;
+		int numeroCifras = 0;
+		int cifra;
+
+		System.out.println("Dame un numero");
+		numero = teclado.nextInt();
+
+		System.out.println("Que numero buscas?");
+		numeroBuscado = teclado.nextInt();
+
+		numeroAux = numero;
+
+		for (; numeroAux != 0; numeroCifras++) {
+			numeroAux /= 10;
+		}
+
+		numeroAux = numero;
+
+		for (int i = 1; i <= numeroCifras; i++) {
+			cifra = numero % 10;
+			if (cifra == numeroBuscado) {
+				numeroRepeticiones++;
+			}
+			numero /= 10;
+
+		}
+
+		System.out.print("El numero aparece en las posiciones = ");
+
+		for (int i = 1; i <= numeroCifras; i++) {
+			cifra = numeroAux % 10;
+			if (cifra == numeroBuscado) {
+				System.out.print(i + " ");
+			}
+			numeroAux /= 10;
+
+		}
+		System.out.print("contando desde la derecha.");
+		System.out.println("");
+		System.out.println("El numero se repite " + numeroRepeticiones + " veces");
+
+	}
+
+	public static void ImprimeL() {
+
+		@SuppressWarnings("resource")
+		Scanner teclado = new Scanner(System.in);
+
+		int altura;
+		int base;
+
+		System.out.println("Dame la altura");
+		altura = teclado.nextInt();
+
+		base = (altura / 2) + 1;
+
+		do {
+
+			System.out.println("*");
+
+			if (altura == 1) {
+				while (base != 0) {
+					System.out.print("*");
+					base--;
+				}
+			}
+
+			altura--;
+		} while (altura != 0);
+
+		System.out.println("");
+	}
+
+	public static void SumaCifrasPares() {
+
+		@SuppressWarnings("unused")
+		Scanner teclado = new Scanner(System.in);
+		
+		
+
+	}
+
 }
