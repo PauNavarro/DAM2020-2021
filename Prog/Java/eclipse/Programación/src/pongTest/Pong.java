@@ -3,42 +3,74 @@ package pongTest;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-@SuppressWarnings("serial")
-public class Pong extends JPanel {
+public class Pong extends JPanel implements KeyListener {
 
+	private static final long serialVersionUID = 3219779922354618365L;
 	int x = 0;
 	int y = 0;
 	int xa = 1;
 	int ya = 1;
-	int xRect = 1;
-	int xaRect = 1;
-	int cont = xRect;
-	int[] posicionRect = new int[150];
 
-	public void movimientoRect() {
+	//Rectangulo inferior
+	int xRectAb = 1;
+	int xaRectAb = 0;
+	int contAb = xRectAb;
+	int[] posicionRectAb = new int[150];
 
-		if (xRect + xaRect < 0)
-			xaRect = 1;
+	/**Rectangulo superior 
 
-		if (xRect + xaRect > getWidth() - 150)
-			xaRect = -1;
+	int xRectAr = 1;
+	int xaRectAr = 0;
+	int contAr = xRectAr;
+	int[] posicionRectAr = new int[150];
+	 */
+	int pulsacion;
+	boolean colision = false;
+	int parar = 0;
+	int puntuacion = 0;
 
-		xRect = xRect + xaRect;
+	public void movimientoRectAbajo() {
+
+		if (xRectAb + xaRectAb >= getWidth() - 150) {
+			xaRectAb = 0;
+		}
+		if (pulsacion == KeyEvent.VK_A) {
+
+			if (xRectAb + xaRectAb < 0) {
+				xaRectAb = 0;
+			} else {
+				xaRectAb = -2;
+			}
+		}
+
+		if (pulsacion == KeyEvent.VK_D) {
+			if (xRectAb + xaRectAb >= getWidth() - 150) {
+				xaRectAb = 0;
+			} else {
+				xaRectAb = 2;
+			}
+		}
+
+		xRectAb = xRectAb + xaRectAb;
 
 		int a = 1;
 
-		for (int i = 0; i < posicionRect.length; i++) {
-			posicionRect[i] = xRect + a;
+		for (int i = 0; i < posicionRectAb.length; i++) {
+			posicionRectAb[i] = xRectAb + a;
 			a++;
 		}
 
 	}
 
-	private int movimientoPelota(int parar) {
+
+	private int[] movimientoPelota(int resultado[]) {
+
 		if (x + xa < 0)
 			xa = 1;
 		if (x + xa > getWidth() - 30)
@@ -47,24 +79,30 @@ public class Pong extends JPanel {
 			ya = 1;
 		if (y + ya > getHeight() - 80) {
 
-			for (int i = 0; i < posicionRect.length; i++) {
-				if (x == posicionRect[i])
+			for (int i = 0; i < posicionRectAb.length; i++) {
+				if (x == posicionRectAb[i]) {
 					ya = -1;
+					puntuacion++;
+
+				}
 				if (y + ya > getHeight() - 30) {
 					parar = 1;
 					ya = -1;
 				}
 			}
 		}
-		
+
 		if (y + ya > getHeight())
 			parar = 1;
-		
 
 		x = (x + xa);
 		y = (y + ya);
 
-		return parar;
+		resultado[0] = puntuacion;
+		resultado[1] = parar;
+
+		return resultado;
+
 	}
 
 	@Override
@@ -73,7 +111,7 @@ public class Pong extends JPanel {
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		g.fillRoundRect(x, y, 30, 30, 30, 30);
-		g.fillRect(xRect, getHeight()-60, 150, 30);
+		g.fillRect(xRectAb, getHeight() - 60, 150, 30);
 
 	}
 
@@ -82,20 +120,41 @@ public class Pong extends JPanel {
 		Pong pong = new Pong();
 		frame.add(pong);
 		frame.setSize(800, 800);
+		frame.setResizable(false);
+		frame.addKeyListener(pong);
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		int parar = 0;
+		int[] resultado = new int[2];
+
 		do {
-			parar = pong.movimientoPelota(parar);
-			pong.movimientoRect();
+
+			pong.movimientoPelota(resultado);
+			//pong.movimientoRectArriba();
+			pong.movimientoRectAbajo();
 			pong.repaint();
-			Thread.sleep(2);
-		} while (parar == 0);
-		
-		JOptionPane.showMessageDialog(null, "Si","Has perdido", JOptionPane.ERROR_MESSAGE);
-		
-		
+			Thread.sleep(3);
+		} while (resultado[1] == 0);
+
+		JOptionPane.showMessageDialog(null, "Has conseguido " + resultado[0] + " puntos", "Has perdido",JOptionPane.ERROR_MESSAGE);
+
+	}
+
+	@Override
+	public void keyPressed(KeyEvent evt) {
+
+		pulsacion = evt.getKeyCode();
+
+	}
+
+	@Override
+	public void keyReleased(KeyEvent evt) {
+
+	}
+
+	@Override
+	public void keyTyped(KeyEvent evt) {
+
 	}
 
 }

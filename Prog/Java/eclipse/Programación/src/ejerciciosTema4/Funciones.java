@@ -560,11 +560,61 @@ public class Funciones {
 
 	public static void SumaCifrasPares() {
 
-		@SuppressWarnings("unused")
 		Scanner teclado = new Scanner(System.in);
-		
-		
 
+		int numero;
+		int numeroaux;
+		int cifraActual;
+		int numeroPares = 0;
+		int sumatorioPares = 0;
+
+		System.out.println("Dame un numero");
+		numero = teclado.nextInt();
+		numeroaux = numero;
+
+		System.out.println("Los numeros pares de el numero " + numero + " son : ");
+
+		for (; numeroaux != 0;) {
+
+			cifraActual = numeroaux % 10;
+
+			if (cifraActual % 2 == 0) {
+
+				numeroPares++;
+
+				sumatorioPares = cifraActual + sumatorioPares;
+			}
+
+			numeroaux /= 10;
+
+		}
+
+		int arrayPares[] = new int[numeroPares];
+
+		for (int i = 0; i < arrayPares.length;) {
+
+			cifraActual = numero % 10;
+
+			if (cifraActual % 2 == 0) {
+				arrayPares[i] = cifraActual;
+				i++;
+			}
+
+			numero /= 10;
+		}
+
+		for (int i = (arrayPares.length) - 1; i >= 0; i--) {
+
+		
+				System.out.print(arrayPares[i] + " , ");
+			
+
+		}
+
+		System.out.println("siendo estos un total de " + numeroPares + " numeros pares.");
+		System.out.println("La suma de estos equivale a = " + sumatorioPares);
+		
+		teclado.close();
 	}
 
 }
