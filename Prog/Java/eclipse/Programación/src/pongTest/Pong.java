@@ -13,6 +13,13 @@ public class Pong extends JPanel implements KeyListener {
 
 	private static final long serialVersionUID = 3219779922354618365L;
 
+	/**
+	 * @author PauNavarro
+	 * 
+	 *         Github: https://github.com/PauNavarro
+	 *
+	 */
+
 	// Variables para la posicion de la pelota
 	int x = 0;
 	int y = 0;
@@ -260,32 +267,28 @@ public class Pong extends JPanel implements KeyListener {
 			Thread.sleep(3); // Detener la ejecucion durante 3 milisegundos
 
 		} while (resultado[1] == 0); // El bucle continuara hasta que la variable almacenada en el vector resultado
-										// [1] (parar) sea diferente de 0
+		// [1] (parar) sea diferente de 0
 
-		// En caso de que se detenga el bucle se mostara por pantalla un mensaje con el resultado obtenido
-		
+		// En caso de que se detenga el bucle se mostara por pantalla un mensaje con el
+		// resultado obtenido
+
 		JOptionPane.showMessageDialog(null, "Habeis conseguido " + resultado[0] + " puntos", "Has perdido",
 				JOptionPane.ERROR_MESSAGE);
 
 	}
 
 	// Metodos de el Keylistener.
-	
+
 	@Override
 	public void keyPressed(KeyEvent evt) {
-
 		pulsacion = evt.getKeyCode();
-
 	}
 
 	@Override
 	public void keyReleased(KeyEvent evt) {
-
 	}
 
 	@Override
 	public void keyTyped(KeyEvent evt) {
-
 	}
-
 }
