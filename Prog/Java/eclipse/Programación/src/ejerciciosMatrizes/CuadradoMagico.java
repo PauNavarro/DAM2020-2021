@@ -6,29 +6,22 @@ public class CuadradoMagico {
 
 		// Declarar Matrizes
 
-		int[][] c = new int[][] { { 8, 1, 6 }, { 3, 5, 7 }, { 4, 9, 2 } };
-		int[][] c2 = new int[][] { { 7, 14, 9 }, { 12, 10, 8 }, { 11, 6, 13 } };
-		int[][] c3 = new int[][] { { 16, 3, 2, 13 }, { 5, 10, 11, 8 }, { 9, 6, 7, 12 }, { 4, 15, 14, 1 } };
+		int[][] c1 = new int[][] { { 8, 1, 6 }, { 3, 5, 7 }, { 4, 9, 2 } }; // si
+		int[][] c2 = new int[][] { { 7, 14, 9 }, { 12, 10, 8 }, { 11, 6, 13 } }; // si
+		int[][] c3 = new int[][] { { 16, 3, 2, 13 }, { 5, 10, 11, 8 }, { 9, 6, 7, 12 }, { 4, 15, 14, 1 } }; // si
+		int[][] c4 = new int[][] { { 10, 10, 10, 11 }, { 10, 10, 10, 11 }, { 25, 25, 25, 25 }, { 11, 0, 0, 0 } }; //no
 
 		// Comprobar si la primera matriz contiene un cuadrado magico
 
-		if (cuadradoMagico(c)) {
-			System.out.println("Si que es un cuadrado magico");
-		} else {
-			System.out.println("No es un cuadrado magico");
-		}
+		System.out.println(cuadradoMagico(c1) ? "Si que es un cuadrado magico" : "No es un cuadrado magico");
 
 		// Imprimir la primera matriz
 
-		imprimeCuadrado(c);
+		imprimeCuadrado(c1);
 
 		// Comprobar si la segunda matriz contiene un cuadrado magico
 
-		if (cuadradoMagico(c2)) {
-			System.out.println("Si que es un cuadrado magico");
-		} else {
-			System.out.println("No es un cuadrado magico");
-		}
+		System.out.println(cuadradoMagico(c2) ? "Si que es un cuadrado magico" : "No es un cuadrado magico");
 
 		// Imprimir la segunda matriz
 
@@ -36,15 +29,19 @@ public class CuadradoMagico {
 
 		// Comprobar si la tercera matriz contiene un cuadrado magico
 
-		if (cuadradoMagico(c3)) {
-			System.out.println("Si que es un cuadrado magico");
-		} else {
-			System.out.println("No es un cuadrado magico");
-		}
+		System.out.println(cuadradoMagico(c3) ? "Si que es un cuadrado magico" : "No es un cuadrado magico");
 
-		// Imprimir la segunda matriz
+		// Imprimir la tercera matriz
 
 		imprimeCuadrado(c3);
+
+		// Comprobar si la cuarta matriz contiene un cuadrado magico
+
+		System.out.println(cuadradoMagico(c4) ? "Si que es un cuadrado magico" : "No es un cuadrado magico");
+
+		// Imprimir la cuarta matriz
+
+		imprimeCuadrado(c4);
 
 	}
 
@@ -55,12 +52,15 @@ public class CuadradoMagico {
 		boolean cuadradoMagico = false;
 		boolean columnasMagicas = false;
 		boolean filasMagicas = false;
+		boolean diagonalesMagicas = false;
 		int sumActFilas = 0;
+		int sumDiagonal1 = 0;
+		int sumDiagonal2 = 0;
 		int ultimoSumFilas = 0;
 		int sumActColum = 0;
 		int ultimoSumColum = 0;
 
-		// Bucle que pasa y suma todas las filas
+		// Bucle que suma todas las filas y comprueba que sus
 
 		for (int i = 0; i < c.length; i++) {
 
@@ -110,7 +110,17 @@ public class CuadradoMagico {
 			}
 		}
 
-		if (filasMagicas && columnasMagicas) {
+		for (int i = 0; i < c.length; i++) {
+			sumDiagonal1 = c[i][i] + sumDiagonal1;
+		}
+		for (int a = c.length - 1; a >= 0; a--) {
+			sumDiagonal2 = c[a][a] + sumDiagonal2;
+		}
+
+		if (sumDiagonal1 == sumDiagonal2)
+			diagonalesMagicas = true;
+
+		if (filasMagicas && columnasMagicas && diagonalesMagicas) {
 			cuadradoMagico = true;
 		}
 
