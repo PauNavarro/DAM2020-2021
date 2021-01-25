@@ -49,7 +49,6 @@ public class Snake extends JPanel implements KeyListener {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		do {
-			w
 			snake.repaint();
 			if (contador != 20) {
 				contador++;
