@@ -1,11 +1,55 @@
 
-section{
-	float: left;
+.Enlace{
+	display: 
+	block; 
+	font-size: 1.5em; 
+	font-weight: bold;
+	/*Lo de arriba es para darle formato como si fuera un H2*/
+	color: red;
+	background-color: #FFF
 }
 
-aside{
+.Enlace:hover {
+	background-color: #CC0000;
+	color: #FFF;
+}
+
+.Enlace:visited{
+	color: #CCC;
+}
+
+input:hover {
+	background-color: #add8e6;
+	border-radius: 25px;
+}
+
+input:focus {
+	background-color: #add8e6;
+	border-radius: 25px;
+}
+
+section {
+	float: left;
+	margin: 10px;
+	border:2px solid black;
+	padding: 20px;
+}
+
+aside {
 	float: right;
 	margin: 10px;
 	border:2px solid black;
 	padding: 20px;
-	 }
+}
+
+#registrarse{
+	float: right;
+}
+
+footer {
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
+   	margin-left: 10px; 
+}
