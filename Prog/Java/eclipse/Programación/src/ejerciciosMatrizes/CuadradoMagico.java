@@ -133,8 +133,7 @@ public class CuadradoMagico {
 
 		for (int i = 0; i < c.length; i++) {
 			for (int a = 0; a < c.length; a++) {
-				System.out.print("|");
-				System.out.printf("%02d", c[i][a]);
+				System.out.printf("|%02d", c[i][a]);
 			}
 			System.out.print("|");
 			System.out.println();
