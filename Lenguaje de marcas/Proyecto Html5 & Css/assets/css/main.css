@@ -1,0 +1,151 @@
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
+
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output,
+section, summary, time, mark, audio, video 
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	-webkit-text-size-adjust: none;
+}
+
+/* Cambios Basicos (Color de fondo, que la pagina sea responsive, etc) */
+
+@-ms-viewport {
+	width: device-width; 
+}
+
+@media screen and (max-width: 480px) {
+
+	html, body {
+		min-width: 320px;
+	}
+
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	background: #1b1f22;
+}
+
+	/* 
+	   No te voy a mentir roberto, no tengo ni idea
+	   de lo que es esto, pero tiene pinta de tener 
+	   que ver con el JavaScript incluido en la 
+	   plantilla, si te puedo decir que la etiqueta
+	   "!important" hace que el navegador le de prioridad
+	   Pero si no pongo esto peta la pagina bastante.
+	   */
+
+	   body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+	   	-moz-animation: none !important;
+	   	-webkit-animation: none !important;
+	   	-ms-animation: none !important;
+	   	animation: none !important;
+	   	-moz-transition: none !important;
+	   	-webkit-transition: none !important;
+	   	-ms-transition: none !important;
+	   	transition: none !important;
+	   }
+
+	   /* Etiquetas comunes, cosas que si que entiendo bien */
+
+	   html {  
+		font-size: 16pt; /* Esta aqui para definir el tamaño 
+		base de toda la letra de la pagina */
+	}
+
+	/* Para que el tamaño de la letra sea responsive */
+
+	@media screen and (max-width: 1680px) {
+
+		html {
+			font-size: 12pt;
+		}
+
+	}
+
+	@media screen and (max-width: 736px) {
+
+		html {
+			font-size: 11pt;
+		}
+
+	}
+
+	@media screen and (max-width: 360px) {
+
+		html {
+			font-size: 10pt;
+		}
+
+	}
+
+	/* Estilo de letra para las etiquetas body input select y textarea */
+
+	body, input, select, textarea {
+		color: #ffffff;
+		font-family: "Source Sans Pro", sans-serif;
+		font-weight: 300;
+		font-size: 1rem;
+		line-height: 1.65;
+	}
+
+	/* Estilo para los enlaces */
+
+	a{
+		-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+		-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+		border-bottom: dotted 1px #FFF;
+		text-decoration: none;
+		color: inherit;
+	}
+
+	/* Estilo para cuando pasas el raton por encima de un enlace */
+
+	a:hover {
+			border-bottom-color: transparent;
+		}
