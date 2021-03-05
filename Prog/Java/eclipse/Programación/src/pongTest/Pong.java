@@ -198,7 +198,7 @@ public class Pong extends JPanel implements KeyListener {
 		y = (y + ya);
 
 		// Inizializacion de los valores del vector de resultados para devolverlos al
-		// main
+		// MainVentana
 
 		resultado[0] = puntuacion;
 		resultado[1] = parar;

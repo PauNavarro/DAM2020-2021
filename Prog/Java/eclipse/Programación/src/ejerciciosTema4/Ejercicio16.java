@@ -16,6 +16,7 @@ public class Ejercicio16 {
 			System.out.println("2.- Calcular el area de un triangulo");
 			System.out.println("3.- Calcular el area de un circulo");
 			System.out.println("4.- Calcular el area de un hexagono");
+			System.out.println("Introduzca el 99 para salir");
 
 			opcion = c.nextInt();
 
