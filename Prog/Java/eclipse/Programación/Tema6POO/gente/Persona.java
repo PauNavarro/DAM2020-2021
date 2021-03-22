@@ -6,10 +6,10 @@ public class Persona {
 	private int edad;
 	private Coche vehiculo;
 
-	public Persona(String nombreIntr) {
+	public Persona(String nombre) {
 
 		this.edad = 0;
-		this.nombre = nombreIntr;
+		this.nombre = nombre;
 		this.vehiculo = null;
 
 	}

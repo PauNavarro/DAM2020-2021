@@ -6,6 +6,11 @@ public class Coche {
 	private String color;
 	private String modelo;
 
+	@Override
+	public String toString() {
+		return "[marca=" + marca + ", color=" + color + ", modelo=" + modelo + "]";
+	}
+
 	public Coche(String marca, String color, String modelo) {
 
 		this.marca  = marca;
