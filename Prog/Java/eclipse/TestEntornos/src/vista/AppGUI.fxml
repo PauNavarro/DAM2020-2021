@@ -1,10 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="aplicacion.Controllers">
-	<!-- TODO Add Nodes -->
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.CalculadoraController">
+   <children>
+      <Separator layoutY="90.0" prefHeight="10.0" prefWidth="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0" />
+      <Label fx:id="numeros" layoutX="9.0" layoutY="12.0" prefHeight="71.0" prefWidth="382.0" textAlignment="RIGHT" AnchorPane.bottomAnchor="317.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="12.0">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="boton_1" layoutX="20.0" layoutY="320.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="65.0" text="1" />
+      <Button fx:id="boton_2" layoutX="100.0" layoutY="320.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="65.0" text="2" />
+      <Button fx:id="boton_3" layoutX="180.0" layoutY="320.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="65.0" text="3" />
+      <Button fx:id="boton_4" layoutX="20.0" layoutY="240.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="65.0" text="4" />
+      <Button fx:id="boton_5" layoutX="100.0" layoutY="240.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="65.0" text="5" />
+      <Button fx:id="boton_6" layoutX="180.0" layoutY="240.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="65.0" text="6" />
+      <Button fx:id="boton_7" layoutX="20.0" layoutY="160.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="65.0" text="7" />
+      <Button fx:id="boton_8" layoutX="100.0" layoutY="160.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="65.0" text="8" />
+      <Button fx:id="boton_9" layoutX="180.0" layoutY="160.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="65.0" text="9" />
+      <Button fx:id="boton_0" layoutX="265.0" layoutY="320.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="52.0" text="0" />
+      <Button fx:id="boton_X" layoutX="265.0" layoutY="160.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="52.0" text="X">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_sum" layoutX="265.0" layoutY="240.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="52.0" text="+">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_divi" layoutX="325.0" layoutY="160.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="52.0" text="÷">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_res" layoutX="325.0" layoutY="240.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="52.0" text="-">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_equal" layoutX="325.0" layoutY="320.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="52.0" text="=">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_AC" layoutX="20.0" layoutY="115.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="65.0" text="AC" />
+      <Button fx:id="boton_C" layoutX="100.0" layoutY="115.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="65.0" text="C" />
+      <Button fx:id="boton_C1" layoutX="180.0" layoutY="115.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="65.0" text="," textAlignment="CENTER" />
+   </children>
 </AnchorPane>
