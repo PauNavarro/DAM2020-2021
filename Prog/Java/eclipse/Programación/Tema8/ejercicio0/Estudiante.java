@@ -49,7 +49,7 @@ public class Estudiante extends Persona {
 	
 	public double getNotaMedia() {
 		
-		int notaMedia = 0;
+		double notaMedia = 0;
 		
 		for (int i = 0; i < notas.length; i++) {
 			notaMedia += notas[i];

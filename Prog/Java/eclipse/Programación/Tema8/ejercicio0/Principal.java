@@ -26,8 +26,8 @@ public class Principal {
 		
 		// ------------------------------------------------------ //
 
-		System.out.println(estudiante1.toString());
-		System.out.println(profesor1.toString());
+		System.out.println(estudiante1);
+		System.out.println(profesor1);
 		
 	}
 
