@@ -23,13 +23,6 @@ public class Empleado {
 
 	}
 
-	public Empleado(String nombre, String DNI) {
-		
-		this.nombre = nombre;
-		dni = DNI;
-		
-	}
-
 	// ---------------------------------------------------- //
 
 	public String getNombre() {
@@ -56,8 +49,8 @@ public class Empleado {
 		this.edad = edad;
 	}
 
-	public boolean estaCasado() {
-		return casado;
+	public String isCasado() {
+		return casado?"Si":"No";
 	}
 
 	public void setCasado(boolean casado) {
@@ -90,15 +83,12 @@ public class Empleado {
 
 	}
 
-	public void mostrarDatos(Empleado empleado) {
-
-		System.out.println("/ ------- " + empleado + " ------- /");
-		System.out.println("/ Nombre  = " + nombre);
-		System.out.println("/ DNI     = " + dni);
-		System.out.println("/ Edad    = " + edad + "años");
-		System.out.println(casado ? "/ Casado  = Si" : "/ Casado  = No");
-		System.out.println("/ Salario = " + salario + "€");
-		System.out.println("/ ------- ------- ------- /");
+	
+	
+	@Override
+	public String toString() {
+		return "Empleado [nombre=" + nombre + ", dni=" + dni + ", edad=" + edad + ", casado=" + isCasado() + ", salario="
+				+ salario + ", Clasificacion=" + clasificacion() +"]";
 	}
 
 	public void aumentarSueldo(int porcentajeAumento) {
@@ -118,5 +108,6 @@ public class Empleado {
 		System.out.println(mensaje);
 
 	}
+	
 
 }

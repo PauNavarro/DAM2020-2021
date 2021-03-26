@@ -33,6 +33,7 @@ public class Main {
 		System.out.println();
 		System.out.println(alumno2.toString());
 		
+		c.close();
 	}
 
 }

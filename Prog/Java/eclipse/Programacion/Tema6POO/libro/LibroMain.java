@@ -1,7 +1,5 @@
 package libro;
 
-import java.io.ObjectInputStream.GetField;
-
 public class LibroMain {
 
 	public static void main(String[] args) {

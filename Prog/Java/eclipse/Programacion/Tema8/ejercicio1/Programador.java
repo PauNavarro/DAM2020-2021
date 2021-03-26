@@ -10,9 +10,9 @@ public class Programador extends Empleado {
 	public Programador() {
 	}
 
-	public Programador(String nombre, String DNI, int lineasPorHora, String lenguaje) {
+	public Programador(String nombre, String DNI, int edad, boolean casado, double salario, int lineasPorHora, String lenguaje) {
 
-		super(nombre, DNI);
+		super(nombre, DNI, edad, casado, salario);
 		this.lineasPorHora = lineasPorHora;
 		this.lenguajeDominante = lenguaje;
 
@@ -59,5 +59,15 @@ public class Programador extends Empleado {
 		return nivel;
 
 	}
+
+	@Override
+	public String toString() {
+		return "Programador [lineasPorHora=" + lineasPorHora + ", lenguajeDominante=" + lenguajeDominante
+				+ ", nivelProgramacion=" + nivelProgramacion() + ", " +  super.toString() + "]";
+	}
+
+	
+	
+	
 
 }

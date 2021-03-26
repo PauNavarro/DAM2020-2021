@@ -25,6 +25,7 @@ public class Notas {
 			System.out.println(i+1+".-");
 			notas[i] = c.nextDouble();
 		}
+		c.close();
 	}
 	
 	public double media() {
