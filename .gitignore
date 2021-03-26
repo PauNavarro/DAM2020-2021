@@ -3,5 +3,5 @@
 **/.project
 **/.classpath
 **/.metadata/
-*.pdf
-*.zip
+**.pdf
+**.zip
