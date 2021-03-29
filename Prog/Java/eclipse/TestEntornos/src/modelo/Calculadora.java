@@ -3,33 +3,16 @@ package modelo;
 public class Calculadora {
 
 	// Atributos
-	private double num1;
-	private double num2;
 	private String operacion;
-	private static String numActual = "";
-	private static String numMemoria = "";
+	private  String numActual = "";
+	private  String numMemoria = "";
+	private boolean hayComa = false; // si hayComa == true, indica que ya se ha introducido una comma
 
 	// Constructor
 	public Calculadora() {
 	}
 
 	// Getters and Setters
-
-	public double getNum1() {
-		return num1;
-	}
-
-	public void setNum1(double num1) {
-		this.num1 = num1;
-	}
-
-	public double getNum2() {
-		return num2;
-	}
-
-	public void setNum2(double num2) {
-		this.num2 = num2;
-	}
 
 	public String getOperacion() {
 		return operacion;
@@ -39,36 +22,45 @@ public class Calculadora {
 		this.operacion = operacion;
 	}
 
-	public static String getNumActual() {
+	public String getNumActual() {
 		return numActual;
 	}
 
-	@SuppressWarnings("static-access")
-	public static void setNumActual(String numActuall) {
+	public void setNumActual(String numActuall) {
 		numActual = numActuall;
 	}
 
-	public static String getNumMemoria() {
+	public String getNumMemoria() {
 		return numMemoria;
 	}
 
-	public static void setNumMemoria(String numEnMemoria) {
+	public void setNumMemoria(String numEnMemoria) {
 		numMemoria = numEnMemoria;
+	}
+	
+	public boolean getComa() {
+		return hayComa;
+	}
+	
+	public void setComa(boolean a) {
+		
+		hayComa = a;
+		
 	}
 
 	// Metodos
 
-	public void sumar() {
+	public void sumar(double num1, double num2) {
 
 		double calculo;
 
 		calculo = num1 + num2;
-
-		numActual = "" + calculo;
+		
+		setNumActual(calculo + "");
 
 	}
 
-	public void restar() {
+	public void restar(double num1, double num2) {
 
 		double calculo;
 
@@ -78,7 +70,7 @@ public class Calculadora {
 
 	}
 
-	public void multiplicar() {
+	public void multiplicar(double num1, double num2) {
 
 		double calculo;
 
@@ -88,7 +80,7 @@ public class Calculadora {
 
 	}
 
-	public void dividir() {
+	public void dividir(double num1, double num2) {
 
 		double calculo;
 

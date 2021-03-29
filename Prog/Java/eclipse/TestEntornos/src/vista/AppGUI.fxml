@@ -51,6 +51,8 @@
       </Button>
       <Button fx:id="boton_AC" layoutX="20.0" layoutY="115.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="65.0" text="AC" />
       <Button fx:id="boton_C" layoutX="100.0" layoutY="115.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="65.0" text="C" />
-      <Button fx:id="boton_C1" layoutX="180.0" layoutY="115.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="65.0" text="," textAlignment="CENTER" />
+      <Button fx:id="boton_comma" layoutX="180.0" layoutY="115.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="65.0" text="," textAlignment="CENTER" />
+      <Label fx:id="numMemo" layoutX="20.0" layoutY="14.0" prefHeight="17.0" prefWidth="65.0" />
+      <Button fx:id="cambiarSigno" layoutX="265.0" layoutY="115.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="52.0" text="- (x)" />
    </children>
 </AnchorPane>
