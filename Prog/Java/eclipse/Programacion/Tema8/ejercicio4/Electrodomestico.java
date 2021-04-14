@@ -1,58 +1,154 @@
-/**
- * 
- */
 package ejercicio4;
 
 /**
- * @author PauNavarro
  * 
- *         Github : https://github.com/PauNavarro
+ * @author Pau Navarro
+ * @since 2021/04/14
  *
  */
 
 public class Electrodomestico {
 
+	/**
+	 * El precio base es un doble representado en €
+	 */
 	private double precioBase = 100;
+	/**
+	 * El color es un String, de los cuales son validos : "blanco", "negro", "rojo", "azul", "gris" .
+	 * No importan las mayusculas o minusculas
+	 */
 	private String color = "blanco";
+	/**
+	 * El peso es un doble representado en Kg
+	 */
 	private double peso = 5;
-	private String consumoEnergetico = "F";
+	/**
+	 * El consumo energetico es un char, de los cuales son validos los caracteres "A", "B", "C", "D", "E", "F"
+	 */
+	private char consumoEnergetico;
 
 	// ---- Getters y Setters ---- //
 
+	/**
+	 * Metodo para obtener el precio base guardado
+	 * 
+	 * @return precioBase
+	 */
 	public double getPrecioBase() {
 		return precioBase;
 	}
 
+	/**
+	 * Metodo para alternar el precio base
+	 * @param precioBase es el precio base que se desea poner
+	 */
 	public void setPrecioBase(double precioBase) {
 		this.precioBase = precioBase;
 	}
 
+	/**
+	 * Metodo para obtener el color guardado
+	 * 
+	 * @return color
+	 */
 	public String getColor() {
 		return color;
 	}
 
+	/**
+	 * Metodo para alternar el color
+	 * @param color es el color que se desea aplicar
+	 */
 	public void setColor(String color) {
 		this.color = color;
 	}
 
+	/**
+	 * Metodo para obtener el peso guardado
+	 * 
+	 * @return peso
+	 */
 	public double getPeso() {
 		return peso;
 	}
 
+	/**
+	 * Metodo para alterar el peso
+	 * @param peso es el peso que se desea guardar
+	 */
 	public void setPeso(double peso) {
 		this.peso = peso;
 	}
-
-	public String getConsumoEnergetico() {
+	
+	/**
+	 * Metodo para obtener el consumo energetico
+	 * 
+	 * @return consumo Energetico
+	 */
+	public char getConsumoEnergetico() {
 		return consumoEnergetico;
 	}
-
-	public void setConsumoEnergetico(String consumoEnergetico) {
+	
+	/**
+	 * Metodo para alterar el consumo energetico
+	 * @param consumoEnergetico es el consumo energetico que deseas guardar
+	 */
+	public void setConsumoEnergetico(char consumoEnergetico) {
 		this.consumoEnergetico = consumoEnergetico;
+	}
+	
+	// ---- Constructores ---- //
+	
+	/**
+	 * Constructor por defecto
+	 */
+	public Electrodomestico() {}
+	
+	/**
+	 * Constructor solo con el precio base y el peso
+	 * @param precioBase es el precio con el que deseas iniciar objeto
+	 * @param peso es el peso inicial del objeto
+	 */
+	public Electrodomestico(double precioBase, double peso) {
+		this.precioBase = precioBase;
+		this.peso = peso;
+	}
+	
+	/**
+	 * Constructor parametrizado con todos los parametros disponibles y con dos metodos de control.
+	 * @param precioBase es el precio con el que deseas iniciar objeto
+	 * @param peso es el peso inicial del objeto
+	 * @param color es el color con el que se iniciara el objeto
+	 * @param consumoEnergetico es el consumo con el que se iniciara el objeto
+	 * @see comprobarConsumo
+	 * @see comprobarColor
+	 * 
+	 */
+	public Electrodomestico(double precioBase, String color, double peso, char consumoEnergetico) {
+		this.precioBase = precioBase;
+		this.color = color;
+		this.peso = peso;
+		this.consumoEnergetico = consumoEnergetico;
+		comprobarConsumo(consumoEnergetico);
+		comprobarColor(color);
 	}
 
 	// ---- Metodo para comprobar el consumo ---- //
 
+	/**
+	 * Metodo de control para comprobar que el char del consumo es correcto, si el consumo introducido es igual a :
+	 * <ul>
+	 * 	<li>"A"</li>
+	 * 	<li>"B"</li>
+	 * 	<li>"C"</li>
+	 * 	<li>"D"</li>
+	 *	<li>"E"</li>
+	 *	<li>"F"</li>
+	 * </ul>
+	 * 
+	 * En caso de que el consumo no sea correcto se aplicara un consumo de "F" como consumo por defecto.
+	 * @param consumoChar Es el consumo a comprobar
+	 */
 	private void comprobarConsumo(char consumoChar) {
 
 		boolean consumoCorrecto = false;
@@ -62,7 +158,7 @@ public class Electrodomestico {
 		String consumoV[] = new String[] { "A", "B", "C", "D", "E", "F" };
 
 		for (int i = 0; i < consumoV.length; i++) {
-			if (consumoStr.equals(consumoV[i]) && consumoCorrecto == false) {
+			if (consumoStr.equalsIgnoreCase(consumoV[i]) && consumoCorrecto == false) {
 
 				consumoCorrecto = true;
 
@@ -73,13 +169,28 @@ public class Electrodomestico {
 			consumoStr = "F";
 		}
 
-		this.consumoEnergetico = consumoStr;
+		char[] consumoCharArr = consumoStr.toCharArray();
+		
+		this.consumoEnergetico = consumoCharArr[0] ;
 	}
 
 	// ---- Metodo para comprobar el color ---- //
 
+	/**
+	 * Metodo de control para comprobar que el color introducido es correcto
+	 * @param color Es el color que se desea comprobar, solo se aceptan como validos los colores listados a continuación:
+	 * <ul>
+	 * 	<li>"blanco"</li>
+	 * 	<li>"negro"</li>
+	 * 	<li>"rojo"</li>
+	 * 	<li>"azul"</li>
+	 *	<li>"gris"</li>
+	 * </ul>
+	 * 
+	 * En caso de que el color introducido no sea correcto se aplicara el color blanco como color por defecto. 
+	 */
 	private void comprobarColor(String color) {
-
+		
 		boolean colorCorrecto = false;
 
 		String colorV[] = new String[] { "blanco", "negro", "rojo", "azul", "gris" };
@@ -101,17 +212,23 @@ public class Electrodomestico {
 
 	// ---- Metodo para establecer el precio final --- //
 
-	public void precioFinal() {
-
-		int precioFinal;
-		int incEnerg;
-		int incPeso;
+	/**
+	 * Metodo para establecer el precio final basandose en el consumo energetico y el peso
+	 * 
+	 * @return precioFinal - El precio final es un doble sacado de añadir los incrementos necesarios a el precio base
+	 */
+	public double precioFinal() {
+		
+		double precioFinal;
+		int incEnerg = 0;
+		int incPeso = 0;
+		String consumoStr = consumoEnergetico+"";
 
 		String tablaEnergia[][] = new String[][] { { "a", "b", "c", "d", "e", "f" },
 				{ "100", "80", "60", "50", "30", "10" } };
 
 		for (int i = 0; i < tablaEnergia.length; i++) {
-			if (consumoEnergetico.equalsIgnoreCase(tablaEnergia[i][0])) {
+			if (consumoStr.equalsIgnoreCase(tablaEnergia[i][0])) {
 
 				incEnerg = Integer.parseInt(tablaEnergia[1][i]);
 
@@ -130,6 +247,8 @@ public class Electrodomestico {
 			incPeso = tablaPeso[3];
 		}
 
+		return precioFinal = precioBase + incPeso + incEnerg;
+		
 	}
 
 }
