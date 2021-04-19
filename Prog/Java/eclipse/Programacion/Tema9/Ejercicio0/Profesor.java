@@ -131,6 +131,7 @@ public class Profesor extends MiembroUPV {
 			break;
 		}
 		
+		c.close();
 	}
 
 }
