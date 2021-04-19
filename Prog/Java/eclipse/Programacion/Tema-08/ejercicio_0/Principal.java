@@ -1,4 +1,4 @@
-package ejercicio0;
+package ejercicio_0;
 
 import gente.Coche;
 
@@ -32,3 +32,4 @@ public class Principal {
 	}
 
 }
+

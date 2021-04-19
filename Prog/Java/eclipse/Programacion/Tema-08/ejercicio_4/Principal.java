@@ -1,6 +1,6 @@
-package ejercicio4;
+package ejercicio_4;
 
-public class main {
+public class Principal {
 
 	public static void main(String[] args) {
 

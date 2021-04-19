@@ -1,4 +1,4 @@
-package ejercicio4;
+package ejercicio_4;
 
 /**
  * 
@@ -7,7 +7,7 @@ package ejercicio4;
  * @see Electrodomestico otros parametros disponibles para la clase.
  */
 
-public class Lavadora extends Electrodomestico {
+public class Lavador extends Electrodomestico {
 
 	/**
 	 * La carga es representada por un numero entero en Kg.
@@ -37,7 +37,7 @@ public class Lavadora extends Electrodomestico {
 	/**
 	 * Constructor por defecto
 	 */
-	public Lavadora() {}
+	public Lavador() {}
 
 	/**
 	 * 
@@ -46,7 +46,7 @@ public class Lavadora extends Electrodomestico {
 	 * @param precio  precio Base de la lavadora
 	 * @see Electrodomestico  Electrodomestico para mas informacion sobre los parametros
 	 */
-	public Lavadora(int peso, double precio) {
+	public Lavador(int peso, double precio) {
 		super.setPeso(peso);
 		super.setPrecioBase(precio);
 	}
@@ -60,7 +60,7 @@ public class Lavadora extends Electrodomestico {
 	 * @param carga  carga maxima de la lavadora
 	 * @see Electrodomestico  Electrodomestico para mas informacion sobre los parametros
 	 */ 
-	public Lavadora(double precioBase, String color, double peso, String consumoEnergetico, int carga) {		
+	public Lavador(double precioBase, String color, double peso, String consumoEnergetico, int carga) {		
 		super(precioBase, color, peso, consumoEnergetico);
 		this.carga = carga;
 	}

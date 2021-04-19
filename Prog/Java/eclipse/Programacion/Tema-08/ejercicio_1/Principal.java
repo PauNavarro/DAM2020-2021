@@ -1,4 +1,4 @@
-package ejercicio1;
+package ejercicio_1;
 
 public class Principal {
 
