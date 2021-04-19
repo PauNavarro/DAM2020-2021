@@ -60,7 +60,7 @@ public class Lavadora extends Electrodomestico {
 	 * @param carga  carga maxima de la lavadora
 	 * @see Electrodomestico  Electrodomestico para mas informacion sobre los parametros
 	 */ 
-	public Lavadora(double precioBase, String color, double peso, char consumoEnergetico, int carga) {		
+	public Lavadora(double precioBase, String color, double peso, String consumoEnergetico, int carga) {		
 		super(precioBase, color, peso, consumoEnergetico);
 		this.carga = carga;
 	}

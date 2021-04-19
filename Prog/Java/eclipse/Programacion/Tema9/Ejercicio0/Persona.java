@@ -1,4 +1,5 @@
-package gente;
+package Ejercicio0;
+import gente.Coche;
 
 public class Persona {
 
@@ -51,3 +52,4 @@ public class Persona {
 	}
 
 }
+

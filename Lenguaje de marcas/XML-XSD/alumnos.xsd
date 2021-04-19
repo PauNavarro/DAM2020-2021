@@ -1,0 +1,46 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="alumnos">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="alumno" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:string" name="nombre"/>
+							<xs:element name="direccion" maxOccurs="2" minOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="calle"/>
+										<xs:element name="numero">
+											<xs:simpleType>
+												<xs:restriction base="xs:integer">
+													<xs:pattern value="(^[0-4]{1}[0-9]{2}|[0-9]{1}|[0-9]{2}|500)"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element type="xs:string" name="ciudad"/>
+										<xs:element name="provincia">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="Badajoz"/>
+													<xs:enumeration value="Caceres"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:int" name="telefono" maxOccurs="5" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attribute name="dni">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:pattern value="^[0-9]{8}[A-Z]"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

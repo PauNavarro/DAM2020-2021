@@ -77,7 +77,7 @@ public class Television extends Electrodomestico {
 	 * @param pulgadas resolucion de la television
 	 * @see Electrodomestico Electrodomestico para mas informacion sobre los parametros
 	 */
-	public Television(double precioBase, String color, double peso, char consumoEnergetico,boolean smartTv, double pulgadas) {
+	public Television(double precioBase, String color, double peso, String consumoEnergetico,boolean smartTv, double pulgadas) {
 		super(precioBase, color, peso, consumoEnergetico);
 		this.smartTv=smartTv;
 		this.resolucion=pulgadas;

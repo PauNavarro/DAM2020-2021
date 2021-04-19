@@ -25,7 +25,7 @@ public class Electrodomestico {
 	/**
 	 * El consumo energetico es un char, de los cuales son validos los caracteres "A", "B", "C", "D", "E", "F"
 	 */
-	private char consumoEnergetico;
+	private String consumoEnergetico;
 
 	// ---- Getters y Setters ---- //
 
@@ -85,7 +85,7 @@ public class Electrodomestico {
 	 * 
 	 * @return consumo Energetico
 	 */
-	public char getConsumoEnergetico() {
+	public String getConsumoEnergetico() {
 		return consumoEnergetico;
 	}
 	
@@ -93,7 +93,7 @@ public class Electrodomestico {
 	 * Metodo para alterar el consumo energetico
 	 * @param consumoEnergetico es el consumo energetico que deseas guardar
 	 */
-	public void setConsumoEnergetico(char consumoEnergetico) {
+	public void setConsumoEnergetico(String consumoEnergetico) {
 		this.consumoEnergetico = consumoEnergetico;
 	}
 	
@@ -119,17 +119,17 @@ public class Electrodomestico {
 	 * @param precioBase es el precio con el que deseas iniciar objeto
 	 * @param peso es el peso inicial del objeto
 	 * @param color es el color con el que se iniciara el objeto
-	 * @param consumoEnergetico es el consumo con el que se iniciara el objeto
+	 * @param string es el consumo con el que se iniciara el objeto
 	 * @see comprobarConsumo
 	 * @see comprobarColor
 	 * 
 	 */
-	public Electrodomestico(double precioBase, String color, double peso, char consumoEnergetico) {
+	public Electrodomestico(double precioBase, String color, double peso, String string) {
 		this.precioBase = precioBase;
 		this.color = color;
 		this.peso = peso;
-		this.consumoEnergetico = consumoEnergetico;
-		comprobarConsumo(consumoEnergetico);
+		this.consumoEnergetico = string;
+		comprobarConsumo(string);
 		comprobarColor(color);
 	}
 
@@ -147,13 +147,13 @@ public class Electrodomestico {
 	 * </ul>
 	 * 
 	 * En caso de que el consumo no sea correcto se aplicara un consumo de "F" como consumo por defecto.
-	 * @param consumoChar Es el consumo a comprobar
+	 * @param string Es el consumo a comprobar
 	 */
-	private void comprobarConsumo(char consumoChar) {
+	private void comprobarConsumo(String string) {
 
 		boolean consumoCorrecto = false;
 
-		String consumoStr = consumoChar + "";
+		String consumoStr = string + "";
 
 		String consumoV[] = new String[] { "A", "B", "C", "D", "E", "F" };
 
@@ -169,9 +169,9 @@ public class Electrodomestico {
 			consumoStr = "F";
 		}
 
-		char[] consumoCharArr = consumoStr.toCharArray();
+		;
 		
-		this.consumoEnergetico = consumoCharArr[0] ;
+		this.consumoEnergetico = consumoStr;
 	}
 
 	// ---- Metodo para comprobar el color ---- //
