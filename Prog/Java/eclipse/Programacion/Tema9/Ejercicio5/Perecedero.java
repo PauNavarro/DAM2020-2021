@@ -56,15 +56,15 @@ public class Perecedero extends Producto {
 		int precioFinal = getPrecio() * cantidad;
 		
 		if (diasACaducar == 3) {
-			precioFinal *= 0.5;
+			precioFinal /= 2;
 		}
 	
 		if (diasACaducar == 2) {
-			precioFinal *= 0.66;
+			precioFinal /= 3.33;
 		}
 		
 		if (diasACaducar == 1) {
-			precioFinal *= 0.75;
+			precioFinal /= 4;
 		}
 		
 		return precioFinal;
