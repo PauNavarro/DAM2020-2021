@@ -4,7 +4,7 @@
 package ejercicio1;
 
 /**
- * @author DAM
+ * @author Pau Navarro
  *
  */
 public class Hardware extends Producto {
