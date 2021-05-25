@@ -15,6 +15,7 @@ public class Main {
 	private JTextField pesoTextField;
 	private JTextField estaturaTextField;
 	private JLabel labelImc;
+	private JLabel lblEstaturaMetros;
 
 	/**
 	 * Launch the application.
@@ -86,6 +87,10 @@ public class Main {
 		labelImc.setBounds(10, 174, 285, 44);
 		frame.getContentPane().add(labelImc);
 
+		lblEstaturaMetros = new JLabel();
+		lblEstaturaMetros.setBounds(120, 126, 77, 20);
+		frame.getContentPane().add(lblEstaturaMetros);
+
 	}
 
 	/**
@@ -107,7 +112,7 @@ public class Main {
 
 		System.out.println(imc);
 
+		lblEstaturaMetros.setText(alturaMetros + "");
 		labelImc.setText("Tu IMC es = " + imc);
 	}
-
 }

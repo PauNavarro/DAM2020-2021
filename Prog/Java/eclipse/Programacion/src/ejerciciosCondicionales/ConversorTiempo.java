@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ConversorTiempo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 
 		// Se debe realizar un programa en el que se introduzca
 		// un número de minutos y devuelva la conversión a días, horas y minutos

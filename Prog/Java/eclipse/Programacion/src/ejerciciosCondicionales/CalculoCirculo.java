@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class CalculoCirculo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		// 4.- Escribe un programa que toma como dato de entrada un número que corresponde a
 		// la longitud de un radio y nos escribe la longitud de la circunferencia, el
 		// área del círculo y el volumen de la esfera que corresponden con dicho radio.

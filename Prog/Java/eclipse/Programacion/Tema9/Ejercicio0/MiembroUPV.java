@@ -7,7 +7,7 @@ public abstract class MiembroUPV extends Persona{
 
 	public MiembroUPV(String nombre) {
 		super(nombre);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	private String carnet;
